@@ -1,0 +1,7 @@
+subck Amp 0 1 2
+
+L:LG 1 G l=1e-9 Q=50 temp=290
+T:T1 0 G D atf35143_M1.s2p
+L:LD D 2 l=1e-9 Q=50 temp=290
+
+.ends

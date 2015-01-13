@@ -6,6 +6,10 @@
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 <title>Input Cards</title>
 <style type='text/css'>
+/* LyX Provided Styles */
+table { border: 1px solid black; display: inline-block; }
+td { border: 1px solid black; padding: 0.5ex; }
+
 /* Layout-provided Styles */
 h1.title {
 font-size: x-large;
@@ -16,12 +20,1742 @@ text-align: center;
 div.standard {
 margin-bottom: 2ex;
 }
+div.plain_layout {
+text-align: left;
+
+}
+div.float {
+border: 2px solid black;
+text-align: center;
+}
+div.float-caption {
+text-align: center;
+border: 2px solid black;
+padding: 1ex;
+margin: 1ex;
+}
 
 
 </style>
 </head>
 <body>
-<h1 class="title"><a id='magicparlabel-38' />Input Cards</h1>
-<div class="standard"><a id='magicparlabel-698' />123</div>
+<h1 class="title"><a id='magicparlabel-10' />Input Cards</h1>
+
+<div class='float float-table'><div class="plain_layout"><a id='magicparlabel-16899' /><div class='float-caption-Standard float-caption float-caption-standard'>Table 1:<div class="plain_layout"><a id='magicparlabel-16898' />MPA-sim: Table of component class functions.<a id="tab_S_Component_Class__Functions" />
+</div>
+</div></div>
+
+
+
+
+<div class="plain_layout"><a id='magicparlabel-16934' /><table><tbody><tr><td align='left' valign='top' colspan='2'><div class="plain_layout"><a id='magicparlabel-16900' /><b>Response calculation procedures</b></div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16902' />Init</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16903' />Initialise memory before simulation begins</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16904' />GetY</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16905' />Return the component's admittance matrix </div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16906' />GetS</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16907' />Return the component's current sources at each node</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16908' />GetN</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16909' />Return the component's noise current correlation matrix</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16910' />DoUpdate</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16911' />Update a component using the calculated circuit response</div>
+</td>
+</tr>
+<tr><td align='left' valign='top' colspan='2'><div class="plain_layout"><a id='magicparlabel-16912' /><b>Response of component when embedded in a circuit</b></div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16914' />GetYin</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16915' />Return the input admittance at a port</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16916' />GetReflect</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16917' />Return the reflection coefficient at a port</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16918' />GetOutput</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16919' />Return a user defined response of the component</div>
+</td>
+</tr>
+<tr><td align='left' valign='top' colspan='2'><div class="plain_layout"><a id='magicparlabel-16920' /><b>Parameter manipulation procedures</b></div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16922' />Load</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16923' />Initially load the component's parameters</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16924' />Paramnum </div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16925' />Return the index of a parameter</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16926' />Paramdouble/string </div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16927' />Return whether a parameter is a number or a string</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16928' />getD </div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16929' />Return the value of a parameter</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16930' />setD </div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16931' />Set the value of a parameter</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16932' />ExportXXXX </div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-16933' />Export the component's parameters in different formats</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+
+
+
+<div class='float float-table'><div class="plain_layout"><a id='magicparlabel-16958' /><div class='float-caption-Standard float-caption float-caption-standard'>Table 2:<div class="plain_layout"><a id='magicparlabel-16936' />MPA-sim: Table of the microstrip components implemented by the simulation software, showing the parameters of each component.<a id="tab_S_Comp_MS" />
+</div>
+</div>
+
+
+<table><tbody><tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16937' />Name</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16938' />Component</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16939' />Parameters &amp; Model used</div>
+</td>
+</tr>
+
+
+
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16941' />Substrate parameters for each component</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16942' />Dielectric constant <b>ER</b>, thickness <b>B</b>, dielectric loss <b>TAND</b>, copper thickness <b>TH</b>, surface roughness <b>SR</b>, resistivity <b>RHO</b> and noise temperature <b>TEMP</b>.</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16943' />TMS</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16944' />Transmission line </div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16945' />Width <b>W</b>, length <b>LEN</b>, angle <b>ANG</b>. 
+<br />
+
+The model of [<a href='#LyXCite-Hammerstad1980'>Hammerstad1980</a>] with the improved formula for the frequency dispersion effect of [<a href='#LyXCite-Kirschning1982'>Kirschning1982</a>] is used. The effect of an impedance step (TMSSTEP) and a gap (TMSGAP) to another line is implemented as well as the effect of open ends. </div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16946' />TMSR</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16947' />Transmission line resistor</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16948' />Same as TMS, but with a resistance <b>R</b> (that may be set to take only <b>discrete</b> values).</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16949' />TMSCNR</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16950' />90<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup><mrow />
+   <mrow><mi>o</mi>
+   </mrow>
+  </msup>
+ </mrow></math> corner</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16951' />The two transmission lines it is connected to is specified.
+<br />
+
+Modelled using the model of [<a href='#LyXCite-Kirschning1983'>Kirschning1983</a>]. </div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16952' />TMSTEE </div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16953' />T-junction </div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16954' />The three transmission lines it is connected to is specified.
+<br />
+
+Modelled using the model of [<a href='#LyXCite-Hammerstad1981'>Hammerstad1981</a>].</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16955' />VIA</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16956' />Via-hole</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16957' />Diameter <b>D</b> and pad radius <b>RPAD</b>.
+<br />
+
+Modelled using the model of [<a href='#LyXCite-Goldfarb1991'>Goldfarb1991</a>].</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div class='float float-table'><div class="plain_layout"><a id='magicparlabel-16998' /><div class='float-caption-Standard float-caption float-caption-standard'>Table 3:<div class="plain_layout"><a id='magicparlabel-16959' />MPA-sim: Table of the general components implemented by the simulation software, showing the parameters of each component.<a id="tab_S_Comp_Gen" />
+</div>
+</div>
+
+
+<table><tbody><tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16960' />Name</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16961' />Component</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16962' />Parameters</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16963' />R</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16964' />Resistor</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16965' />Resistance <b>R</b> (may be negative) with noise temperature <b>TEMP</b> and generating an open-circuit voltage <b>VAC</b>.</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16966' />C</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16967' />Capacitor</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16968' />Capacitance <b>C</b>, loss coefficient <b>TAND</b>, parasitic inductance L, equivalent series resistance <b>ESR</b> at the frequency <b>ESRF</b> with a noise temperature <b>TEMP.</b></div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16969' />L</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16970' />Inductor</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16971' />Inductance <b>L</b>, series resistance <b>R</b>, Quality factor <b>Q</b>, skin resistance <b>RSKIN</b>, noise temperature <b>TEMP</b>, coupling coefficient to another inductor <b>K</b>.</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16972' />T</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16973' />Transistor</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16974' />Scattering and noise coefficients given by <b>filename</b>.</div>
+
+<div class="plain_layout"><a id='magicparlabel-16975' />Special outputs: <b>1</b>) minimum noise figure <b>2</b>) noise resistance <b>3</b>) noise conductance <b>4</b>) noise correlation admittance.</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16976' />A</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16977' />Ideal gain block </div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16978' />Input resistance <b>RIN</b> with noise temperature <b>TEMPIN</b>, output resistance <b>ROUT</b> with noise temperature <b>TEMPOUT</b>, gain <b>A</b>+<b>AW</b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &omega; </mi>
+ </mrow></math>, phase delay <b>PHASE</b>+<b>PW</b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &omega; </mi>
+ </mrow></math> and noise measure <b>M</b>. </div>
+
+<div class="plain_layout"><a id='magicparlabel-16979' />A look-up table can also be used for different gains and phase delays at different frequencies.</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16980' />LOSS</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16981' />Ideal loss block</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16982' />Input and output resistance <b>RIN</b> having noise temperature <b>TEMPIN</b>, loss <b>A</b>+<b>AW</b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &omega; </mi>
+ </mrow></math>.</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16983' />VCCS</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16984' />Current controlled voltage source</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16985' />Transconductance <b>GM</b>, parallel output resistance <b>R</b> with a noise temperature <b>TD</b>.</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16986' />TL3</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16987' />Analytic transmission line</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16988' />Characteristic impedance <b>Z0</b>, dielectric constant <b>K</b>, length <b>LEN</b>, dielectric loss <b>TAND</b>, resistive loss <b>ALPHA </b>or resistance per meter <b>R_M</b> with noise temperature <b>TEMP</b>, surface roughness <b>SR</b>, conductivity <b>COND</b>.</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16989' />TLR</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16990' />Transmission line resistor</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16991' />Same as TL3, but with resistance <b>R</b> (can be set to take <b>discrete</b> values).</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16992' />CKT</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16993' />Sub-circuit</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16994' />Sub-circuit <b>filename</b>, solved using LU-elimination or matrix inversion (<b>INVERT</b>). Gain and noise is calculated using the resistance given by <b>POWER-SCALE</b>.</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16995' />EMCKT</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16996' />Sub-circuit with EM coupling</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-16997' />Same as CKT.</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div class='float float-table'><div class="plain_layout"><a id='magicparlabel-17011' /><div class='float-caption-Standard float-caption float-caption-standard'>Table 4:<div class="plain_layout"><a id='magicparlabel-16999' />MPA-sim: Table of special components implemented by the simulation software, showing the parameters of each component.<a id="tab_S_Comp_Special" />
+</div>
+</div>
+
+
+<table><tbody><tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17000' />Name</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17001' />Component</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17002' />Parameters &amp; Model used</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17003' />MMIN</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17004' />Ideal output network and its minimum noise measure </div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17005' />A number of load resistors must be given.</div>
+
+<div class="plain_layout"><a id='magicparlabel-17006' />The component solves the eigenvalue problem Eq. <a href="#eq_M0_opt">eq:M0_opt</a> for the signal dissipated in the resistors. 
+<br />
+
+<b>UPDATE</b>: If the load resistors are the input resistors of ideal gain blocks, the optimum gain is stored in each gain component's look-up table.</div>
+
+<div class="plain_layout"><a id='magicparlabel-17007' /><b>Special outputs</b>: 
+<br />
+
+0) minimum noise measure, 
+<br />
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>100</mn><mo>+</mo><mi>j</mi>
+  </mrow>
+ </mrow></math>) optimum gain of the <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>-th path. </div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17008' />MPA</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17009' />MPA calculator</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17010' />An input network, a number of two-port amplifiers and an output network must be given as input parameters. 
+<br />
+
+<b>Special outputs</b>: 
+<br />
+
+0) optimum source admittance (Eq <a href="#eq_Yopt">eq:Yopt</a>), 
+<br />
+
+1) mismatch between the optimum and the actual path conductance i.e. <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msubsup>
+    <mrow><mo> &sum; </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msubsup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+   <mrow>
+    <msub>
+     <mrow><mi>Y</mi>
+     </mrow>
+     <mrow>
+      <mstyle mathvariant='normal'>
+       <mrow><mi>p</mi><mi>a</mi><mi>t</mi><mi>h</mi>
+       </mrow>
+      </mstyle>
+     </mrow>
+    </msub><mo>-</mo>
+    <msub>
+     <mrow><mi>Y</mi>
+     </mrow>
+     <mrow>
+      <mstyle mathvariant='normal'>
+       <mrow><mi>p</mi><mo>,</mo><mi>o</mi><mi>p</mi><mi>t</mi>
+       </mrow>
+      </mstyle>
+     </mrow>
+    </msub>
+   </mrow><mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo><mo>/</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+   <mrow>
+    <msub>
+     <mrow><mi>Y</mi>
+     </mrow>
+     <mrow>
+      <mstyle mathvariant='normal'>
+       <mrow><mi>p</mi><mi>a</mi><mi>t</mi><mi>h</mi>
+       </mrow>
+      </mstyle>
+     </mrow>
+    </msub><mo>+</mo>
+    <msub>
+     <mrow><mi>Y</mi>
+     </mrow>
+     <mrow>
+      <mstyle mathvariant='normal'>
+       <mrow><mi>p</mi><mo>,</mo><mi>o</mi><mi>p</mi><mi>t</mi>
+       </mrow>
+      </mstyle>
+     </mrow>
+    </msub>
+   </mrow><mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo><mo>,</mo>
+  </mrow>
+ </mrow></math> 
+<br />
+
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>100</mn><mo>+</mo><mi>j</mi>
+  </mrow>
+ </mrow></math>) optimum gain of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>-th path (Eq. <a href="#eq_Ypath_1">eq:Ypath-1</a>). </div>
+</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+
+
+
+
+
+<div class='float float-table'><div class="plain_layout"><a id='magicparlabel-17027' /><div class='float-caption-Standard float-caption float-caption-standard'>Table 5:<div class="plain_layout"><a id='magicparlabel-17015' />MPA-sim: Table of calculation cards.<a id="tab_S_Calculation_cards" />
+</div>
+</div>
+
+
+
+
+
+
+
+
+<table><tbody><tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17018' />CALC:AC [START=start] [STOP=stop] [STEP=step]</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17019' />Calculate the AC response of the circuit from frequency <b>start</b> to frequency <b>stop</b> in steps of <b>step</b>.</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17020' />CALC:LAYOUT </div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17021' />Calculate the physical layout of the circuit. </div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17022' />CALC:FIELD [FREQ=freq] [PHI=phi] [N=n] [SRC=src] [NORM=norm]</div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17023' />Calculate the radiation pattern at frequency <b>freq</b> by sweeping the source <b>src</b> at an angle <b>phi</b> using <b>n</b> steps. Results are normalised with <b>norm</b>.</div>
+</td>
+</tr>
+<tr><td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17024' />OPTIM:alg [DIR=d] [START=start] [STOP=stop] [STEP=step] [MAXSTEP=maxstep] [SAVEVAR=savefile] [LOADVAR=loadfile] [TOLL=toll] [F<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>=resp<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>] [AVG<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>=avg<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>] [WGH<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>=wgh<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>] [START<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>=start<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>] [STOP<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>=stop<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>] (N<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>=n<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>) comp<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math>:param<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math>(min<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math>,max<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math>,step<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math>) </div>
+</td>
+
+<td align='left' valign='middle'><div class="plain_layout"><a id='magicparlabel-17025' />Maximise (<b>dir</b>=1) or minimise (<b>dir</b>=-1) an optimisation function using the algorithm <b>alg</b> (Table <a href="#S_Optimisation_algorithms">6</a>). The optimisation function consists of the sum of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>n</mi>
+ </mrow></math> terms with each term given by the response <b>resp</b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math> (Table <a href="#tab_S__Circuit_responce">9</a>) average from frequency <b>start</b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math> to frequency <b>stop</b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math> using average method <b>avg</b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math> (Table <a href="#tab_S_Averaging">7</a>), normalised with optimisation function term N<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math> and weight <b>wgh</b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>j</mi>
+ </mrow></math>. The response of the circuit is calculated from frequency <b>start</b> to frequency <b>stop</b> in steps of <b>step</b>. Optimisation is stopped when the improvement is less than <b>toll</b> or when <b>maxstep</b> steps are reached. </div>
+
+<div class="plain_layout"><a id='magicparlabel-17026' />The parameter <b>param<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math></b> of component <b>comp</b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math> is a`n optimisation variable that can take values between <b>min<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math></b> and <b>max<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math></b> in discrete steps of size <b>step</b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math>. The optimised values are loaded from <b>loadfile</b> before optimisation and saved to <b>savefile</b> after each step.</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+
+
+
+<div class='float float-table'><div class="plain_layout"><a id='magicparlabel-17030' /><div class='float-caption-Standard float-caption float-caption-standard'>Table 6:<div class="plain_layout"><a id='magicparlabel-17029' />MPAsim: Table of optimisation algorithms.<a id="S_Optimisation_algorithms" />
+</div>
+</div></div>
+
+
+
+
+<div class="plain_layout"><a id='magicparlabel-17047' /><table><tbody><tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17031' />Name</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17032' />Description</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17033' />Step1</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17034' />A gradient method where each variable is increased and decreased by a small amount, called the step length. If this results in no improvement, the step length is decreased. If the step results in an improvement, another step is taken in that direction.</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17035' />Step2</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17036' />Similar to the method in Step1, but after each variable is varied on its own, extrapolation steps are tried in the direction of overall improvement.</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17037' />Rand</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17038' />A random method, where a population (P<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mn>2</mn>
+ </mrow></math>) of circuits is randomly selected around the current solution. For each iteration, the best P<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mn>3</mn>
+ </mrow></math> circuits are kept, and the other (P<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mn>2</mn>
+ </mrow></math>-P<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mn>3</mn>
+ </mrow></math>) circuits are formed by randomly combining the best P<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mn>3</mn>
+ </mrow></math> circuits. </div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17039' />Rands</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17040' />A random step method, similar to the method in Step1, but where step directions are randomly chosen and the step length gradually decreases if the steps are unsuccessful and increased if the steps are successful.</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17041' />External</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17042' />An external program is used for optimisation, with the variables and cost function communicated using UNIX FIFO pipes.</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17043' />Comp</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17044' />The complex method.</div>
+</td>
+</tr>
+<tr><td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17045' />ASCO</div>
+</td>
+
+<td align='left' valign='top'><div class="plain_layout"><a id='magicparlabel-17046' />Similar to the method in External, but configured to use the optimisation program ASCO (A SPICE Circuit Optimiser).</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+
+
+
+<div class='float float-table'><div class="plain_layout"><a id='magicparlabel-17050' /><div class='float-caption-Standard float-caption float-caption-standard'>Table 7:<div class="plain_layout"><a id='magicparlabel-17049' />MPAsim: Table of frequency averaging types.<a id="tab_S_Averaging" />
+</div>
+</div></div>
+
+
+
+
+<div class="plain_layout"><a id='magicparlabel-17091' /><table><tbody><tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17051' />#</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17052' />Function</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17053' />#</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17054' />Function</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17055' />-2</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17056' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mover>
+   <mrow>
+    <msup>
+     <mrow><mi>x</mi>
+     </mrow>
+     <mrow>
+      <mrow><mo>-</mo><mn>2</mn>
+      </mrow>
+     </mrow>
+    </msup>
+   </mrow><mo stretchy="true">&macr;</mo>
+  </mover>
+ </mrow></math></div>
+</td>
+
+
+
+
+
+
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17059' />-1</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17060' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mover>
+   <mrow>
+    <msup>
+     <mrow><mi>x</mi>
+     </mrow>
+     <mrow>
+      <mrow><mo>-</mo><mn>1</mn>
+      </mrow>
+     </mrow>
+    </msup>
+   </mrow><mo stretchy="true">&macr;</mo>
+  </mover>
+ </mrow></math></div>
+</td>
+
+
+
+
+
+
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17063' />1</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17064' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mover>
+   <mrow><mi>x</mi>
+   </mrow><mo stretchy="true">&macr;</mo>
+  </mover>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17065' />11</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17066' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mover>
+    <mrow><mi>x</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </mover><mo>&gt;</mo><mi>y</mi>
+  </mrow>
+ </mrow></math></div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17067' />2</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17068' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow>
+    <mover>
+     <mrow><mi>x</mi>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </mover>
+   </mrow>
+   <mrow><mn>2</mn>
+   </mrow>
+  </msup>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17069' />21</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17070' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mover>
+    <mrow><mi>x</mi>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </mover><mo>&lt;</mo><mi>y</mi>
+  </mrow>
+ </mrow></math></div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17071' />3</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17072' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow><mi>x</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msup>
+    <mrow>
+     <mover>
+      <mrow><mi>x</mi>
+      </mrow><mo stretchy="true">&macr;</mo>
+     </mover>
+    </mrow>
+    <mrow>
+     <mrow><mo>-</mo><mn>2</mn>
+     </mrow>
+    </mrow>
+   </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+   <mrow>
+    <mover>
+     <mrow>
+      <msup>
+       <mrow><mi>x</mi>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow><mo stretchy="true">&macr;</mo>
+    </mover><mo>-</mo>
+    <msup>
+     <mrow>
+      <mover>
+       <mrow><mi>x</mi>
+       </mrow><mo stretchy="true">&macr;</mo>
+      </mover>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </msup>
+   </mrow><mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+  </mrow>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17073' />13</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17074' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow><mi>x</mi>
+    </mrow>
+   </msub><mo>&gt;</mo><mi>y</mi>
+  </mrow>
+ </mrow></math></div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17075' />4</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17076' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>m</mi>
+    </mrow>
+    <mrow><mi>x</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <mfrac>
+    <mrow>
+     <mrow>
+      <msub>
+       <mrow><mo> max </mo>
+       </mrow>
+       <mrow><mi>x</mi>
+       </mrow>
+      </msub><mo>-</mo>
+      <msub>
+       <mrow><mo> min </mo>
+       </mrow>
+       <mrow><mi>x</mi>
+       </mrow>
+      </msub>
+     </mrow>
+    </mrow>
+    <mrow>
+     <mrow>
+      <msub>
+       <mrow><mo> max </mo>
+       </mrow>
+       <mrow><mi>x</mi>
+       </mrow>
+      </msub><mo>+</mo>
+      <msub>
+       <mrow><mo> min </mo>
+       </mrow>
+       <mrow><mi>x</mi>
+       </mrow>
+      </msub>
+     </mrow>
+    </mrow>
+   </mfrac>
+  </mrow>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17077' />14</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17078' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>m</mi>
+    </mrow>
+    <mrow><mi>x</mi>
+    </mrow>
+   </msub><mo>&gt;</mo><mi>y</mi>
+  </mrow>
+ </mrow></math></div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17079' />5</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17080' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mover>
+   <mrow>
+    <mfrac>
+     <mrow>
+      <mrow><mi>d</mi><mi>x</mi>
+      </mrow>
+     </mrow>
+     <mrow>
+      <mrow><mi>d</mi><mi>f</mi>
+      </mrow>
+     </mrow>
+    </mfrac>
+   </mrow><mo stretchy="true">&macr;</mo>
+  </mover>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17081' />15</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17082' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mover>
+    <mrow>
+     <mfrac>
+      <mrow>
+       <mrow><mi>d</mi><mi>x</mi>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>d</mi><mi>f</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+    </mrow><mo stretchy="true">&macr;</mo>
+   </mover><mo>&gt;</mo><mi>y</mi>
+  </mrow>
+ </mrow></math></div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17083' />6</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17084' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mo> max </mo>
+   </mrow>
+   <mrow><mi>x</mi>
+   </mrow>
+  </msub>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17085' />16</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17086' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo> max </mo>
+    </mrow>
+    <mrow><mi>x</mi>
+    </mrow>
+   </msub><mo>&gt;</mo><mi>y</mi>
+  </mrow>
+ </mrow></math></div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17087' />7</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17088' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mo> min </mo>
+   </mrow>
+   <mrow><mi>x</mi>
+   </mrow>
+  </msub>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17089' />17</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17090' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo> min </mo>
+    </mrow>
+    <mrow><mi>x</mi>
+    </mrow>
+   </msub><mo>&lt;</mo><mi>y</mi>
+  </mrow>
+ </mrow></math></div>
+</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+
+
+
+
+
+<div class='float float-table'><div class="plain_layout"><a id='magicparlabel-17112' /><div class='float-caption-Standard float-caption float-caption-standard'>Table 8:<div class="plain_layout"><a id='magicparlabel-17095' />MPAsim: Table of special cards.</div>
+</div>
+
+
+<table><tbody><tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17096' />Card</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17097' />Description</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17098' />PLOT:filename x-var y-var1 [y-var2 ...]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17099' />Export data to <b>filename</b> (when calculated with CALC) and plot with gnuplot.</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17100' />PRINT:filename var1 [var2 ...]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17101' />Export data to <b>filename</b> (when calculated with CALC).</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17102' />FP:DRAW:xfig filename [show])</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17103' />Export layout to xfig (when calculated with CALC:LAYOUT).</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17104' />CLOSEPRINT:</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17105' />Close PLOT and PRINT files and draw graphs.</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17106' />SET:name data</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17107' />Define a name representing the following data string.</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17108' />FUNC:name TYPE=type V0=<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>V</mi>
+   </mrow>
+   <mrow><mn>0</mn>
+   </mrow>
+  </msub>
+ </mrow></math> [V1=<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>V</mi>
+   </mrow>
+   <mrow><mn>1</mn>
+   </mrow>
+  </msub>
+ </mrow></math>] comp<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math>:param<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math>(<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>a</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math>,<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>b</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math>) [BMIN=bmin] [BMAX=bmax]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17109' />Parameter <b>param</b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math> of component <b>comp</b><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>i</mi>
+ </mrow></math> is given by <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>F</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math> where <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>F</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>V</mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mi>b</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>V</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math><b> </b>when <b>type=0</b>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>F</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>=</mo>
+   <msub>
+    <mrow><mi>a</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>V</mi>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+   </msub>
+   <msubsup>
+    <mrow><mi>V</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow>
+     <msub>
+      <mrow><mi>b</mi>
+      </mrow>
+      <mrow><mi>i</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </msubsup>
+  </mrow>
+ </mrow></math> when <b>type=1</b> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>F</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math> is look-up in a data table (from file <b>data</b>) when <b>type=3</b>. <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>F</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+ </mrow></math> is limited to between <b>bmin</b> and <b>bmax</b>.</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17110' />#include filename</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17111' />Insert the text of<b> filename</b> into this position.</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+
+
+
+<div class='float float-table'><div class="plain_layout"><a id='magicparlabel-17115' /><div class='float-caption-Standard float-caption float-caption-standard'>Table 9:<div class="plain_layout"><a id='magicparlabel-17114' />MPAsim: Table of circuit response parameters.<a id="tab_S__Circuit_responce" />
+</div>
+</div></div>
+
+
+
+
+<div class="plain_layout"><a id='magicparlabel-17193' /><table><tbody><tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17116' />Name</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17117' />Description</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17118' />Example</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17119' />#</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17120' />Freq</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17121' />Frequency</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17122' />Freq</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17123' />-1</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17124' />Signal</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17125' />Signal voltage between Node1 and Node0</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17126' />[subckt:]Signal:Node1[-node0][:Func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17127' />0</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17128' />Noise</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17129' />RMS noise voltage between Node 1 and Node 0</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17130' />[subckt:]Noise:Node1[-node0][:Func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17131' />1</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17132' />Temp</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17133' />Noise temperature measured across node 1 and node 0</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17134' />[subckt:]Temp:Node1[-node0][:Func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17135' />2</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17136' />Y</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17137' />Admittance matrix element: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>Y</mi>
+   </mrow>
+   <mrow>
+    <mrow><mi>p</mi><mn>1</mn><mo>,</mo><mi>p</mi><mn>2</mn>
+    </mrow>
+   </mrow>
+  </msub>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17138' />[subckt:]Y:<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>p</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>p</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>[:func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17139' />3</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17140' />Z</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17141' />Impedance matrix element: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msubsup>
+   <mrow><mi>Z</mi>
+   </mrow>
+   <mrow>
+    <mrow><mi>p</mi><mn>1</mn><mo>,</mo><mi>p</mi><mn>2</mn>
+    </mrow>
+   </mrow>
+   <mrow>
+    <mrow><mo>-</mo><mn>1</mn>
+    </mrow>
+   </mrow>
+  </msubsup>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17142' />[subckt:]Z:<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>p</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>p</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math>[:func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17143' />4</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17144' />Reflect</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17145' />Reflection coefficient at node</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17146' />[subckt:]reflect:Node1[-node0][:Func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17147' />5</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17148' />Gain</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17149' />Gain</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17150' />[subckt:]Gain:Node1[-node0][:Func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17151' />6</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17152' />Zin</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17153' />Input impedance at node</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17154' />[subckt:]Zin:Node1[-node0][:Func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17155' />7</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17156' />Ncor</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17157' />Correlation between noise at node1 and 2 </div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17158' />[subckt:]Ncor:Node1-Node2[:Func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17159' />8</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17160' />TempA</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17161' />Noise Measure </div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17162' />[subckt:]tempA:Node1[-node0][:Func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17163' />9</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17164' />YIN</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17165' />Impedance seen at node</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17166' />[subckt:]Comp:YIN:nodeval[:func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17167' />20</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17168' />reflect</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17169' />Reflection at node</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17170' />[subckt:]Comp:REFLECT:nodeval[:func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17171' />21</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17172' />K</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17173' />Stability coefficient</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17174' />[subckt:]K</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17175' />30</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17176' />Yparam</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17177' />Entire admittance matrix </div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17178' />[subckt:]Yparam</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17179' />32</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17180' />NIparam</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17181' />Entire noise current correlation matrix</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17182' />[subckt:]YNIparam</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17183' />34</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17184' />Nparam</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17185' />Two-port noise parameters </div>
+
+<div class="plain_layout"><a id='magicparlabel-17186' />1: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>F</mi>
+   </mrow>
+   <mrow>
+    <mstyle mathvariant='normal'>
+     <mrow><mi>m</mi><mi>i</mi><mi>n</mi>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </msub>
+ </mrow></math> 2: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>R</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+ </mrow></math> 3: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>G</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+ </mrow></math> 4: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>Y</mi>
+   </mrow>
+   <mrow>
+    <mstyle mathvariant='normal'>
+     <mrow><mi>c</mi><mi>o</mi><mi>r</mi>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </msub>
+ </mrow></math> 
+<br />
+
+5: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>Y</mi>
+   </mrow>
+   <mrow>
+    <mstyle mathvariant='normal'>
+     <mrow><mi>T</mi><mi>o</mi><mi>p</mi><mi>t</mi>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </msub>
+ </mrow></math> 7: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>T</mi>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msub>
+ </mrow></math> 8: <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mo> &Gamma; </mo>
+   </mrow>
+   <mrow>
+    <mstyle mathvariant='normal'>
+     <mrow><mi>T</mi><mi>o</mi><mi>p</mi><mi>t</mi>
+     </mrow>
+    </mstyle>
+   </mrow>
+  </msub>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17187' />[subckt:]Nparam:<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>x</mi>
+ </mrow></math>[:Func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17188' />35</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17189' />RPC</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17190' />Two-port noise current coefficients
+<br />
+
+1) <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>R</mi>
+ </mrow></math> 2) <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>P</mi>
+ </mrow></math> 3) <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>C</mi>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17191' />[subckt:]RPC:Node1[-node0][:Func]</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17192' />36</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+
+
+
+<div class='float float-table'><div class="plain_layout"><a id='magicparlabel-17196' /><div class='float-caption-Standard float-caption float-caption-standard'>Table 10:<div class="plain_layout"><a id='magicparlabel-17195' />MPAsim: Table of functions on complex number circuit response parameters.</div>
+</div></div>
+
+
+
+
+<div class="plain_layout"><a id='magicparlabel-17239' /><table><tbody><tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17197' />Name</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17198' />Number</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17199' />Description</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17200' />Re</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17201' />1</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17202' />Real part</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17203' />Im</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17204' />2</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17205' />Imaginary part</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17206' />Mag</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17207' />3</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17208' />Magnitude</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17209' />Db</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17210' />4</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17211' />Magnitude in DB</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17212' />Delay</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17213' />5</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17214' />Phase delay</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17215' />Osc</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17216' />6</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17217' />Real part when imaginary part crosses zero</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17218' />Osc2</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17219' />7</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17220' />Real part when imaginary part is less than real part / 10.</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17221' />Osc2I</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17222' />8</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17223' />Inverse of Osc2</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17224' />OscS</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17225' />9</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17226' />Special function</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17227' />Ang</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17228' />10</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17229' />Angle (degrees) (between +-180)</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17230' />Ang2</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17231' />11</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17232' />Angle (Continuous)</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17233' />IRe</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17234' />12</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17235' />Real part of inverse</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17236' />IIM</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17237' />13</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-17238' />Imaginary part of inverse</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+</div>
+
 </body>
 </html>

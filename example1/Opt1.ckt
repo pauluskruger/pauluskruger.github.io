@@ -1,0 +1,16 @@
+subck Opt1 0
+
+R:Ri 0 In r=50 temp=0 vac=2
+CKT:S1 0 In Out Amp.ckt
+R:Ru 0 Out r=50 temp=290
+
+SETPARAM:POWER-SCALE RI:R RU:R
+
+optim:step2 dir=-1 start=1e9 stop=2e9 step=0.1e9 maxsteps=10 savevar=Opt1.dat F1=tempA:Out Avg1=1 S1:LG:L(1e-9,100e-9) S1:LD:L(1e-9,100e-9) toll=1e-4
+
+plot:"Opt1_M" freq tempA:Out temp:Out S1:M4:0:MAG
+plot:"Opt1_A" freq gain:Out:dB  S1:S:21:db
+plot:"Opt1_S" freq RI:REFLECT:dB S1:S:11:db
+calc:AC start=0.5e9 stop=3e9 step=0.1e9
+
+.ends

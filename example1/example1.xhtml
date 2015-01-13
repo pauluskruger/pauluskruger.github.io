@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="GENERATOR" content="LyX 2.1.1" />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<title>Simple single path amplifier</title>
+<style type='text/css'>
+/* Layout-provided Styles */
+h1.title {
+font-size: x-large;
+margin-bottom: 1ex;
+text-align: center;
+
+}
+h2.section {
+font-weight: bold;
+font-size: x-large;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+div.standard {
+margin-bottom: 2ex;
+}
+div.plain_layout {
+text-align: left;
+
+}
+div.Boxed {
+border: solid thick black;
+padding: 0.5ex;
+}
+
+
+</style>
+</head>
+<body>
+<h1 class="title"><a id='magicparlabel-22936' />Simple single path amplifier</h1>
+<h2 class="section"><a id='magicparlabel-23047' /><span class="section_label">1</span> Amplifier circuit</h2>
+<div class="standard"><a id='magicparlabel-23037' />The <a href="Amplifier.ckt">amplifier</a> consist of a single ATF35143 transistor (modelled by its S-parameters) with a gate and drain inductor.</div>
+
+<div class="standard"><a id='magicparlabel-23006' /><div class='Boxed'><div class="plain_layout"><a id='magicparlabel-22966' /><pre>subck Amp 0 1 2
+
+L:LG 1 G l=1e-9 Q=50 temp=290
+T:T1 0 G D atf35143_M1.s2p
+L:LD D 2 l=1e-9 Q=50 temp=290
+
+.ends
+</pre></div>
+</div></div>
+<h2 class="section"><a id='magicparlabel-23059' /><span class="section_label">2</span> Optimisation</h2>
+<div class="standard"><a id='magicparlabel-23063' /><div class='Boxed'><div class="plain_layout"><a id='magicparlabel-23449' /><pre>subck Opt1 0
+
+R:Ri 0 In r=50 temp=0 vac=2
+CKT:S1 0 In Out Amp.ckt
+R:Ru 0 Out r=50 temp=290
+
+SETPARAM:POWER-SCALE RI:R RU:R
+
+optim:step2 dir=-1 start=1e9 stop=2e9 step=0.1e9 maxsteps=10 savevar=Opt1.dat F1=tempA:Out Avg1=1 S1:LG:L(1e-9,100e-9) S1:LD:L(1e-9,100e-9) toll=1e-4
+
+plot:"Opt1_M" freq tempA:Out temp:Out S1:M4:0:MAG
+plot:"Opt1_A" freq gain:Out:dB  S1:S:21:db
+plot:"Opt1_S" freq RI:REFLECT:dB S1:S:11:db
+calc:AC start=0.5e9 stop=3e9 step=0.1e9
+
+.ends</pre></div>
+</div></div>
+
+<div class="standard"><a id='magicparlabel-23453' />For simulation, a 50 Ohm input and output resistor is specified, with the first resistor being a current source.</div>
+
+<div class="standard"><a id='magicparlabel-23180' />Next, the amplifier is optimised for minimum (dir-1) average (avg1=1) noise measure (F1=tempA:Out) over the frequency band from 1&nbsp;GHz (start=1e9) to 2&nbsp;GHz (stop=2e9). Frequency steps of 0.1&nbsp;GHz (step=0.1e9) is used. The inductances (L) of the two inductors (LG and LD) in the amplifier subcircuit (S1) are optimised within the limits of 1nH and 100nH: (S1:LG:L(1e-9,100e-9) S1:LD:L(1e-9,100e-9)). A gradient step method is used (optim:step2) in the optimisation. The optimum values are saved in a file (save=Opt1.dat).</div>
+
+<div class="standard"><a id='magicparlabel-23349' />The optimisation gives the following output:</div>
+
+<div class="standard"><a id='magicparlabel-23311' /><div class='Boxed'><div class="plain_layout"><a id='magicparlabel-23312' />Opt1 Minimizing vars=2 functions=1 freq steps=11 (from +1000M stepsize=+ 100M) </div>
+
+<div class="plain_layout"><a id='magicparlabel-23316' />Optimizing function= +1.00 *M (Out,0):AVG </div>
+
+<div class="plain_layout"><a id='magicparlabel-23318' />Using step method 2 </div>
+
+<div class="plain_layout"><a id='magicparlabel-23320' />0[+1.00n+1.00n]=+60.0 </div>
+
+<div class="plain_layout"><a id='magicparlabel-23322' />1[+12.0n+2.00n]=+38.3 </div>
+
+<div class="plain_layout"><a id='magicparlabel-23324' />2[+12.0n+1.78n]=+38.3 </div>
+
+<div class="plain_layout"><a id='magicparlabel-23326' />3[+9.60n+2.47n]=+37.1 </div>
+
+<div class="plain_layout"><a id='magicparlabel-23328' />4[+9.90n+2.78n]=+37.0 </div>
+
+<div class="plain_layout"><a id='magicparlabel-23330' />5[+9.45n+3.04n]=+37.0 </div>
+
+<div class="plain_layout"><a id='magicparlabel-23332' />6[+9.52n+2.99n]=+37.0 </div>
+
+<div class="plain_layout"><a id='magicparlabel-23334' />Extrapolation steps=6 </div>
+
+<div class="plain_layout"><a id='magicparlabel-23336' />Solution has Converged! </div>
+
+<div class="plain_layout"><a id='magicparlabel-23338' />Optimum = 3.70204645917608E+001 Time=0.01sec </div>
+
+<div class="plain_layout"><a id='magicparlabel-23340' />Solution= </div>
+
+<div class="plain_layout"><a id='magicparlabel-23342' />CKT:S1:LG:L=+9.52n </div>
+
+<div class="plain_layout"><a id='magicparlabel-23344' />CKT:S1:LD:L=+2.99n </div>
+
+<div class="plain_layout"><a id='magicparlabel-23346' />Saving variables to Opt1.dat</div>
+</div></div>
+
+<div class="standard"><a id='magicparlabel-23473' />Lastly, three plots are opened (plot:...) and a AC calculation is performed (calc:AC) from 0.5GHz (start=0.5e9) to 3&nbsp;GHz (stop=3e9) in steps of 0.1&nbsp;GHz (step=0.1e9).</div>
+
+<div class="standard"><a id='magicparlabel-23529' />The first plot gives the noise measure (tempA:out) and noise figure (temp:out) at the output as a temperature in Kelvin as well as the minimum noise measure of the amplifier (S1:M4:0:mag)</div>
+
+<div class="standard"><a id='magicparlabel-23578' /><img src='6_home_user_LNA2015_doc_pauluskruger_github_io_example1_Opt1_M.png' alt='image: 6_home_user_LNA2015_doc_pauluskruger_github_io_example1_Opt1_M.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-23580' />The second plot gives the gain in dB in two different ways, first by measuring the signal at the output (gain:Out) for the given input signal and secondly by calculating the <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>S</mi>
+   </mrow>
+   <mrow><mn>21</mn>
+   </mrow>
+  </msub>
+ </mrow></math>-parameter of the amplifier subcircuit (S1:S:21:dB):</div>
+
+<div class="standard"><a id='magicparlabel-23633' /><img src='7_home_user_LNA2015_doc_pauluskruger_github_io_example1_Opt1_A.png' alt='image: 7_home_user_LNA2015_doc_pauluskruger_github_io_example1_Opt1_A.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-23637' />The third plot give the input reflection (in dB) in two different ways, first by calculating the impedance seen by the resistor RI (RI:REFLECT:dB) and secondly by calculating the <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>S</mi>
+   </mrow>
+   <mrow><mn>11</mn>
+   </mrow>
+  </msub>
+ </mrow></math>-parameter of the amplifier subcircuit (S1:S:11:dB):</div>
+
+<div class="standard"><a id='magicparlabel-23718' /><img src='8_home_user_LNA2015_doc_pauluskruger_github_io_example1_Opt1_S.png' alt='image: 8_home_user_LNA2015_doc_pauluskruger_github_io_example1_Opt1_S.png' />
+</div>
+</body>
+</html>

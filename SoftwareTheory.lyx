@@ -1,0 +1,1132 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+
+\lang british
+Simulation Software
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Software-requirements"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang british
+MPA-sim
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:MPA-simulator"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+A circuit simulator called the MultiPath Amplifier and Antenna simulator
+ (MPA
+\begin_inset Formula $^{2}$
+\end_inset
+
+-sim) was developed to do linear, frequency domain MPA simulation and optimisati
+on.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+The simulator is object-orientated and a circuit is modelled by using different
+ components.
+ The response of each component is modelled by an admittance matrix.
+ The voltage at each node is taken as a variable and the sum of the currents
+ of the components at each node forms a set of equations that is solved.
+ Electromagnetic coupling and radiation is incorporated by adding coupling
+ terms between the current and voltages of the different components.
+ MPA-sim can calculate and optimise the physical layout, frequency response
+ and radiation pattern of a circuit (see Table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:S:Calculation-cards"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Each component is derived from the component class by implementing the functions
+ of the class (see Table 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "tab:S:Component-Class:-Functions"
+
+\end_inset
+
+).
+ This makes it very easy to add new components, as each component only has
+ to implement the function that is required to model the component.
+ In order to model the MPAs considered in this thesis, the microstrip components
+ shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:S:Comp_MS"
+
+\end_inset
+
+, the general components shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:S:Comp_Gen"
+
+\end_inset
+
+ and the special components shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:S:Comp_Special"
+
+\end_inset
+
+ were implemented.
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+The amplifier's physical layout can be exported to Gerber or Fig format
+ which can be used directly for PCB manufacturing.
+ The circuit's response can be exported to QUCS or Microwave Office spice
+ format to verify the response with other simulation software.
+ The response and radiation patterns can be exported to data files and plotted
+ automatically using Gnuplot.
+\end_layout
+
+\begin_layout Subsection
+
+\lang british
+Requirements for fast MPA optimisation 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+In order to implement the optimisation procedure of Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Optimisation-procedure"
+
+\end_inset
+
+, the simulation software can:
+\end_layout
+
+\begin_layout Description
+
+\lang british
+Solve
+\begin_inset space ~
+\end_inset
+
+the
+\begin_inset space ~
+\end_inset
+
+multipath
+\begin_inset space ~
+\end_inset
+
+noise
+\begin_inset space ~
+\end_inset
+
+measure
+\begin_inset space ~
+\end_inset
+
+eigenvalue
+\begin_inset space ~
+\end_inset
+
+problem Using the power and noise delivered at a number of loads, MPA-sim
+ solves the eigenvalue problem given in Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:M0_opt"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Description
+
+\lang british
+Alternate
+\begin_inset space ~
+\end_inset
+
+different
+\begin_inset space ~
+\end_inset
+
+optimisation
+\begin_inset space ~
+\end_inset
+
+methods.
+ MPA-sim
+\series medium
+ has various random and gradient search methods (see Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "S:Optimisation-algorithms"
+
+\end_inset
+
+), which can be alternated when optimising an MPA.
+ External optimisation methods can also be used.
+\end_layout
+
+\begin_layout Description
+
+\lang british
+Import
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+export
+\begin_inset space ~
+\end_inset
+
+component
+\begin_inset space ~
+\end_inset
+
+parameters.
+ MPA-sim makes it easy to load and save the optimised component parameters.
+ For example, when the amplification paths are optimised, the resulting
+ parameters can be saved and when optimising the input network, the parameters
+ can be loaded again (into a look-up table if required).
+\end_layout
+
+\begin_layout Description
+
+\lang british
+Only
+\begin_inset space ~
+\end_inset
+
+recalculate
+\begin_inset space ~
+\end_inset
+
+changed
+\begin_inset space ~
+\end_inset
+
+sub-circuits.
+ When an amplifier is optimised, the response of the amplifier must be solved
+ many times for different component values.
+ Once the response of the amplifier is solved, only the sub-circuits that
+ are changed are solved again.
+ This especially speeds up the gradient (step) optimisation method especially,
+ in which only one variable at a time is changed.
+\end_layout
+
+\begin_layout Subsection
+
+\lang british
+Requirements for fast EM circuit simulation 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+To simulate an MPA with electromagnetic coupling, the simulation software
+ can:
+\end_layout
+
+\begin_layout Description
+
+\lang british
+Simultaneously
+\begin_inset space ~
+\end_inset
+
+optimise
+\begin_inset space ~
+\end_inset
+
+layout
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+response.
+ When a component's electrical response depends on the physical layout of
+ the amplifier, the layout and the response of the circuit must be optimised
+ simultaneously.
+ The optimisation function may then consist of layout and circuit response
+ goals and constraints.
+\end_layout
+
+\begin_layout Description
+
+\lang british
+Calculate
+\begin_inset space ~
+\end_inset
+
+electrodynamic
+\begin_inset space ~
+\end_inset
+
+coupling
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+radiation
+\begin_inset space ~
+\end_inset
+
+of
+\begin_inset space ~
+\end_inset
+
+transmission
+\begin_inset space ~
+\end_inset
+
+lines.
+ MPA-sim incorporates three-dimensional electromagnetic coupling between
+ transmission lines as shown in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Coupling-of-transmission"
+
+\end_inset
+
+.
+ An EM source can be included by adding a source term to the induced scalar
+ and vector potentials.
+ The radiation pattern of an antenna can then be calculated by sweeping
+ a point source around.
+ Note that the response of the circuit only has to be calculated once for
+ the sweep.
+ 
+\end_layout
+
+\begin_layout Description
+
+\lang british
+Variable
+\begin_inset space ~
+\end_inset
+
+simulation
+\begin_inset space ~
+\end_inset
+
+accuracy
+\begin_inset space ~
+\end_inset
+
+and
+\begin_inset space ~
+\end_inset
+
+speed.
+ The accuracy of the electromagnetic coupling depends on the number of segments
+ each transmission line is divided into.
+ By using a few segments first, fast optimisation can be done to get close
+ to an optimum.
+ The number of segments can then be increased to improve the simulation
+ accuracy.
+\end_layout
+
+\begin_layout Subsection
+
+\lang british
+MPA features
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+In order to analyse MPAs, MPA
+\begin_inset Formula $^{2}$
+\end_inset
+
+-sim can:
+\end_layout
+
+\begin_layout Description
+
+\lang british
+Calculate
+\begin_inset space ~
+\end_inset
+
+node
+\begin_inset space ~
+\end_inset
+
+admittances.
+ In order to test for loop instabilities, the software can calculate the
+ total admittance seen at the nodes of components even if the components
+ are inside sub-circuits.
+\end_layout
+
+\begin_layout Description
+
+\lang british
+Use
+\begin_inset space ~
+\end_inset
+
+a
+\begin_inset space ~
+\end_inset
+
+circuit's
+\begin_inset space ~
+\end_inset
+
+response
+\begin_inset space ~
+\end_inset
+
+for
+\begin_inset space ~
+\end_inset
+
+component
+\begin_inset space ~
+\end_inset
+
+parameters.
+ MPA
+\begin_inset Formula $^{2}$
+\end_inset
+
+-sim can calculate the response of a circuit or sub-circuit and then use
+ the response as the value of a component's parameter.
+ It can then recalculate the response of the circuit until the responses
+ have converged.
+ This is required to make the following possible:
+\end_layout
+
+\begin_layout Itemize
+
+\lang british
+To calculate an MPA's noise parameters when using an ideal output network,
+ the optimum gain is first calculated and then the optimum gain is used
+ for the gain of a number of ideal amplifiers which forms the output network.
+ This is used for the simulations in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Rn_Simulations"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\lang british
+To simulate an optimum-loaded input network, the amplifiers are simulated
+ and the amplifiers' optimum source admittance is then used as the admittance
+ of a load connected to the input network.
+ This is used for the simulations done in Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Example:-Parallel-amplifiers"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\lang british
+To calculate non-linearity, the gain of an amplifier is made to depend on
+ the input or output voltage or current of the amplifier.
+\end_layout
+
+\begin_layout Subsection
+
+\lang british
+EM coupling between transmission lines
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Coupling-of-transmission"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Electromagnetic coupling between transmission lines is implemented by modelling
+ each transmission line using two current waves travelling in opposite direction
+s along the transmission line.
+ These currents generate retarded vector and scalar potentials at other
+ transmission lines, which then induces current waves along the length of
+ the transmission lines.
+ The transmission line must therefore be divided into discrete segments.
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+This method may be generalised to surfaces by using Huygen's principle.
+ This, however, is not implemented by the software yet.
+ The surface can be modelled with current waves generated at a number of
+ points on the edge of the surface, with each wave being terminated once
+ it reaches the edge of the surface.
+ The current waves then induce vector and scalar potentials on another surface,
+ which induces current waves.
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+For current waves 
+\begin_inset Formula $i_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $i_{2}$
+\end_inset
+
+ at the two endpoints (
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+) of a transmission line, the current and voltage at the two endpoints can
+ be written as
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{c}
+i_{A}\\
+i_{B}
+\end{array}\right] & =\left[\begin{array}{cc}
+1 & -e^{\gamma l}\\
+-e^{\gamma l} & 1
+\end{array}\right]\left[\begin{array}{c}
+i_{1}\\
+i_{2}
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+and
+\begin_inset Formula 
+\begin{align*}
+\left[\begin{array}{c}
+v_{A}\\
+v_{B}
+\end{array}\right] & =Z_{0}\left[\begin{array}{cc}
+1 & e^{\gamma l}\\
+e^{\gamma l} & 1
+\end{array}\right]\left[\begin{array}{c}
+i_{1}\\
+i_{2}
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+with 
+\begin_inset Formula $Z_{0}$
+\end_inset
+
+ the characteristic impedance of the transmission line and 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ the propagation constant.
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang british
+Potentials generated by a transmission line
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+For a general charge density 
+\begin_inset Formula $\rho(\mathbf{r},t)$
+\end_inset
+
+ and current density 
+\begin_inset Formula $J(\mathbf{r},t)$
+\end_inset
+
+ the scalar and vector potentials
+\begin_inset Formula 
+\begin{align*}
+V(\mathbf{r}^{\prime},t) & =\frac{1}{4\pi\varepsilon_{0}}\int\frac{\rho(\mathbf{r},t_{r})}{s}d\tau^{\prime}\\
+\mathbf{A}(\mathbf{r}^{\prime},t) & =\frac{1}{4\pi\varepsilon_{0}c^{2}}\int\frac{\mathbf{J}(\mathbf{r},t_{r})}{s}d\tau^{\prime}
+\end{align*}
+
+\end_inset
+
+are a general solution to Maxwell's equations 
+\begin_inset CommandInset citation
+LatexCommand citep
+after " : 423"
+key "Griffiths1999"
+
+\end_inset
+
+, where 
+\begin_inset Formula $s=\left|\mathbf{r}-\mathbf{r}^{\prime}\right|$
+\end_inset
+
+ is the distance to the charge and current density, 
+\begin_inset Formula $t_{r}=t_{0}-s/c$
+\end_inset
+
+ is the retarded time and 
+\begin_inset Formula $c$
+\end_inset
+
+ and 
+\begin_inset Formula $\varepsilon_{0}$
+\end_inset
+
+ are the speed of light and permittivity of free space.
+\end_layout
+
+\begin_layout Paragraph
+
+\lang british
+Assumption 1: Constant cross-section profile
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+It is assumed that current only flows in the direction of the transmission
+ line, i.e.
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $\mathbf{J}=\pm J\hat{z}$
+\end_inset
+
+.
+ This implies that the cross-section profile of the charge and current density
+ stays constant along the transmission line length.
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Conservation of charge requires that 
+\begin_inset Formula 
+\begin{alignat*}{1}
+\frac{\partial\rho(\mathbf{r},t)}{\partial t} & =-\frac{\partial J(\mathbf{r},t)}{\partial z}.
+\end{alignat*}
+
+\end_inset
+
+For a frequency 
+\begin_inset Formula $\omega$
+\end_inset
+
+ this requirement can be written as 
+\begin_inset Formula $\rho=-(\gamma/\omega)J$
+\end_inset
+
+ and for the phase difference due to time retardation can be written as
+ 
+\begin_inset Formula $e^{j\omega s/c}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+The potential generated by a transmission line with a length 
+\begin_inset Formula $2l$
+\end_inset
+
+ due to the current wave 
+\begin_inset Formula $I$
+\end_inset
+
+ can be written as
+\begin_inset Formula 
+\begin{align*}
+V(\mathbf{r}^{\prime},t) & \approx\frac{1}{4\pi\varepsilon_{0}}F(\mathbf{r}^{\prime},t)I\frac{\gamma}{\omega}e^{j\omega t}\\
+\mathbf{A}(\mathbf{r}^{\prime},t) & \approx\frac{1}{4\pi\varepsilon_{0}}F(\mathbf{r}^{\prime},t)I\frac{\pm\hat{\mathbf{z}}}{c^{2}}e^{j\omega t}.
+\end{align*}
+
+\end_inset
+
+The function 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $F(\mathbf{r}^{\prime},t)$
+\end_inset
+
+ is given by
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+ 
+\begin_inset Formula 
+\begin{align*}
+F(\mathbf{r}^{\prime},t) & \equiv\int_{-l}^{l}\int\frac{J_{p}e^{\pm jkz}e^{j\omega s/c}}{s}dAdz.
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $J_{p}$
+\end_inset
+
+ is the distribution of the current across the cross-section of the transmission
+ line.
+ Numerical integration (across the surface and along the length of the transmiss
+ion line) is required to evaluate 
+\begin_inset Formula $F(\mathbf{r}^{\prime},t)$
+\end_inset
+
+ at each frequency, which is computationally very expensive and dominates
+ the circuit evaluation time.
+ When certain assumptions can be made, it is easier to evaluate 
+\begin_inset Formula $F(\mathbf{r}^{\prime},t)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Paragraph
+
+\lang british
+Assumption 2: Current flows at the surface
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+At high frequencies, the skin depth is very small, so that it can be assumed
+ that current flows only on the surface on the transmission line
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+.
+ The function 
+\begin_inset Formula $F(\mathbf{r}^{\prime},t)$
+\end_inset
+
+ can then be approximated by 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\begin{align*}
+F(\mathbf{r}^{\prime},t) & \approx\int_{-l}^{l}\oint\frac{\sigma e^{\pm jkz}e^{j\omega s/c}}{s}dldz.
+\end{align*}
+
+\end_inset
+
+where 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ gives the distribution of the surface current along the circumference.
+ 
+\end_layout
+
+\begin_layout Paragraph
+
+\lang british
+Assumption 3: Short transmission line length
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang british
+For a short transmission line length the factor 
+\begin_inset Formula $e^{\pm jkz}$
+\end_inset
+
+ can be dropped, as it gives rise to second and higher order terms in 
+\begin_inset Formula $z$
+\end_inset
+
+ when the current wave 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+
+\begin_inset Formula $I_{k,1}$
+\end_inset
+
+ is taken at the centre of the transmission line.
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ The function 
+\begin_inset Formula $F(\mathbf{r}^{\prime},t)$
+\end_inset
+
+ is then given by
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+ 
+\begin_inset Formula 
+\begin{align*}
+F(\mathbf{r}^{\prime},t) & \approx\int_{-l}^{l}\oint\frac{\sigma e^{j\omega s/c}}{s}dldz.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+
+\lang british
+Assumption 4: Distance larger than width
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+When the distance 
+\begin_inset Formula $s$
+\end_inset
+
+ is larger than the width of the transmission line, or when the distance
+ 
+\begin_inset Formula $s$
+\end_inset
+
+ stays constant, the integral around the transmission line is not required,
+ giving
+\begin_inset Formula 
+\begin{align*}
+F(\mathbf{r}^{\prime},t) & \approx\int_{-l}^{l}\frac{e^{j\omega s/c}}{s}dz.
+\end{align*}
+
+\end_inset
+
+This may be used, for example, to calculate the coupling between two straight
+ wires lying on the same axis.
+\end_layout
+
+\begin_layout Paragraph
+
+\lang british
+Assumption 5: Distance larger than length
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+For points far from the transmission line, 
+\begin_inset Formula $F(\mathbf{r}^{\prime},t)$
+\end_inset
+
+ can simply be approximated by
+\begin_inset Formula 
+\begin{align*}
+F(\mathbf{r}^{\prime},t) & \approx\frac{e^{j\omega s/c}}{s}2l.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+
+\lang british
+Current generated by potentials
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+Because the potentials induce currents along the length of a transmission
+ line, the transmission line is divided into 
+\begin_inset Formula $n$
+\end_inset
+
+ segments.
+ For each segment an induced voltage 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ is calculated, 
+\begin_inset Formula 
+\begin{align}
+v_{i} & =\frac{1}{2}(V_{i,c}-V_{i+1,c})-\frac{l_{i}}{2}(\frac{\partial A_{i}}{\partial t}+\frac{\partial A_{i+1}}{\partial t})\label{eq:EM_vi}
+\end{align}
+
+\end_inset
+
+where 
+\begin_inset Formula $V_{i,c}$
+\end_inset
+
+, 
+\begin_inset Formula $V_{i+1,c}$
+\end_inset
+
+, 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $A_{i+1}$
+\end_inset
+
+ are the scalar and vector potentials at the end points of the 
+\begin_inset Formula $i$
+\end_inset
+
+-th segment and 
+\begin_inset Formula $l_{i}$
+\end_inset
+
+ is the length of the segment.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+The current and voltage at the end points are then given by
+\begin_inset Formula 
+\begin{align}
+\left[\begin{array}{c}
+i_{A}\\
+i_{B}
+\end{array}\right] & =\left[\begin{array}{cc}
+1 & -e^{\gamma l}\\
+-e^{\gamma l} & 1
+\end{array}\right]\left[\begin{array}{c}
+i_{1}\\
+i_{2}
+\end{array}\right]+Y_{0}\sum_{i}v_{i}\left[\begin{array}{c}
+e^{\gamma l_{A,i}}\\
+-e^{\gamma l_{B,i}}
+\end{array}\right]\label{eq:EM_IAB}\\
+\left[\begin{array}{c}
+V_{A}\\
+V_{B}
+\end{array}\right] & =Z_{0}\left[\begin{array}{cc}
+1 & e^{\gamma l}\\
+e^{\gamma l} & 1
+\end{array}\right]\left[\begin{array}{c}
+i_{1}\\
+i_{2}
+\end{array}\right]-\sum_{i}v_{i}\left[\begin{array}{c}
+e^{\gamma l_{A,i}}\\
+-e^{\gamma l_{B,i}}
+\end{array}\right]+\frac{1}{2}\left[\begin{array}{c}
+V_{1}+\frac{\partial A_{i}}{\partial t}l_{1}\\
+V_{n}-\frac{\partial A_{n}}{\partial t}l_{n}
+\end{array}\right]\label{eq:EM_VAB}
+\end{align}
+
+\end_inset
+
+and the currents at the middle of each segment are given by
+\begin_inset Formula 
+\begin{align*}
+I_{j,1} & =e^{\gamma l_{A,j,}}i_{A}+Y_{0}\sum_{k=1}^{j-1}e^{\gamma l_{k,j,}}V_{j}\\
+I_{j,2} & =e^{\gamma l_{B,j,}}i_{B}-Y_{0}\sum_{k=j+1}^{n}e^{\gamma l_{k,j,}}V_{j}.
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang british
+This method of modelling electromagnetic coupling between transmission lines,
+ requires 
+\begin_inset Formula $n+2$
+\end_inset
+
+ additional variables (in addition to the node voltages 
+\begin_inset Formula $V_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $V_{B}$
+\end_inset
+
+) and 
+\begin_inset Formula $n+2$
+\end_inset
+
+ additional equations
+\end_layout
+
+\end_body
+\end_document

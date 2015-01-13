@@ -68,36 +68,8 @@
 
 \begin_body
 
-\begin_layout Title
-MPAsim
-\end_layout
-
-\begin_layout Author
-Multipath low-noise amplifier simulator
-\end_layout
-
 \begin_layout Standard
-\begin_inset CommandInset href
-LatexCommand href
-name "Input Cards"
-target "InputCards.xhtml"
-type "file:"
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Examples:
-\end_layout
-
-\begin_layout Itemize
-Simple 1 path amplifier
-\end_layout
-
-\begin_layout Itemize
-Simple 2 path amplifier
 \end_layout
 
 \end_body
