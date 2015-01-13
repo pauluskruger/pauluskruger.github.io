@@ -81,7 +81,7 @@ The
 \begin_inset CommandInset href
 LatexCommand href
 name "amplifier"
-target "Amplifier.ckt"
+target "Amp.ckt"
 type "file:"
 
 \end_inset
