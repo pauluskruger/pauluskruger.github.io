@@ -1,0 +1,43 @@
+subck Opt2 0
+SET:INVERT true
+
+*Input Network
+L:LG1 1 G1  l=1e-9 Q=50 temp=290
+L:LG2 G1 G2 l=1e-9 Q=50 temp=290
+
+*Amplifier paths
+T:T1 0 G1 D1 atf35143_M1.s2p
+T:T1 0 G2 D2 atf35143_M1.s2p
+
+L:LD1 D1 U1 l=1e-9 Q=50 temp=290
+L:LD2 D2 U2 l=1e-9 Q=50 temp=290
+
+*Ideal output network
+A:RO1 0 U1 0 2 rin=100 tempin=100 tempout=290 rout=100 M=50
+A:RO2 0 U2 0 2 rin=100 tempin=100 tempout=290 rout=100 M=50
+MMIN:M1 RO1 RO2
+
+*Input and output port
+R:Ri 0 1 r=50 temp=0 vac=2
+R:Ru 0 2 r=50 temp=0
+SETPARAM:POWER-SCALE RI:R RU:R
+
+*Optimisation
+Set:OptVar  LG1:L(1e-9,100e-9) LG2:L(1e-9,100e-9) LD1:L(1e-9,100e-9) LD2:L(1e-9,100e-9)
+Set:OptFunc F1=Comp:M1-0 Avg1=1
+Set:Opt dir=-1 start=1e9 stop=2e9 step=0.1e9 maxsteps=10 savevar=Opt1.dat  $OptVar $OptFunc   toll=1e-4
+optim:step2 $Opt
+
+*Plots
+Set:PlotFreq start=0.5e9 stop=3e9 step=0.1e9
+
+print:"OptOutput.txt" freq MminV:M1
+calc:AC  $PlotFreq
+CLOSEPRINT:
+SETPARAM: M1:LOAD OptOutput.txt
+
+plot:"Opt2_M" freq Comp:M1-0 tempA:2 Comp:T1-0
+plot:"Opt2_S" freq RI:REFLECT:dB
+calc:AC $PlotFreq
+
+.ends
