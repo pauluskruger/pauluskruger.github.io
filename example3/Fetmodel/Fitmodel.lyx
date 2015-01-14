@@ -76,8 +76,8 @@ ATF35143 S-parameter extrapolation to low frequencies
 (Source code given in 
 \begin_inset CommandInset href
 LatexCommand href
-name "example3/Fetmode"
-target "https://github.com/pauluskruger/pauluskruger.github.io/tree/master/example3/Fetmode"
+name "example3/Fetmodel"
+target "https://github.com/pauluskruger/pauluskruger.github.io/tree/master/example3/Fetmodel"
 type "file:"
 
 \end_inset
