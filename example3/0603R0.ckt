@@ -1,0 +1,19 @@
+subck 0603R0 0 1 2
+#include NN.subs
+* 0603: W=0.8mm L=1.6mm h=0.45mm; contact l=0.25, between = 1.6-0.5=1.1
+
+
+TMS:TP0 0 1  A2 $DUR len=0.6e-3 w=0.9e-3 FOOTPRINT open=2
+TMSR:R1 0 A2 B2 $DURR W=0.9e-3 LEN=0.9e-3 R=100 $DISCRETE
+C:Cp A2 B2 c=0.01e-12
+TMS:TP3 0 +2 B2 $DUR len=0.6e-3 w=0.9e-3 FOOTPRINT open=2
+
+FP:M2PAD2:R A2 B2 D=0.9e-3 B=0.6e-3 W=0.9e-3  LABEL=R VALUE=R1:R
+
+* Vishay:  --- C --- C=0.0403pF
+*          --R---L-- L=0.0267nH
+
+* Vortrag 200ohm: C=0.02pF Cpar=0.06pF L=0.85nH
+
+* FP:DRAW:xfig 0603R0.fig show
+* calc:Layout 

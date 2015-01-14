@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="GENERATOR" content="LyX 2.1.1" />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<title>ATF35143 S-parameter extrapolation to low frequencies</title>
+<style type='text/css'>
+/* Layout-provided Styles */
+h1.title {
+font-size: x-large;
+margin-bottom: 1ex;
+text-align: center;
+
+}
+div.standard {
+margin-bottom: 2ex;
+}
+h2.section {
+font-weight: bold;
+font-size: x-large;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+
+
+</style>
+</head>
+<body>
+<h1 class="title"><a id='magicparlabel-7317' />ATF35143 S-parameter extrapolation to low frequencies</h1>
+<div class="standard"><a id='magicparlabel-7318' />(Source code given in <a href="https://github.com/pauluskruger/pauluskruger.github.io/tree/master/example3/Fetmode">example3/Fetmode</a>)</div>
+<h2 class="section"><a id='magicparlabel-7319' /><span class="section_label">1</span> HEMT Model</h2>
+<div class="standard"><a id='magicparlabel-7320' />The package model as given in the manufacture datasheet are used to model the package and the following model is used to model the chip (<a href="Model.ckt">Circuit</a>):</div>
+
+<div class="standard"><a id='magicparlabel-7321' /><img src='16_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_hemt2.png' alt='image: 16_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_hemt2.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-7322' />The value of Ta = 290K is kept fixed and all other values of the chip model are optimised <a href="Model.ckt">Model</a>.</div>
+<h2 class="section"><a id='magicparlabel-7323' /><span class="section_label">2</span> Fit results</h2>
+<div class="standard"><a id='magicparlabel-7324' />First the model is fitted to the S-parameters over the bandwidths 0.5-3&nbsp;GHz (A) and 0.5-10&nbsp;GHz (B).</div>
+
+<div class="standard"><a id='magicparlabel-7325' />The fitted values are <a href="Model.dat">A</a> and <a href="ModelFull.dat">B</a> and the graphs below shows how the model compare to the S-parameters. </div>
+
+<div class="standard"><a id='magicparlabel-7326' />A new <a href="atf35143_M1.s2p">S-Parameters</a> file is then generated using the model, which is used in the amplifier design.</div>
+
+<div class="standard"><a id='magicparlabel-7327' />Graph Legend: T1: Model A, T2: Manufacturers S-Parameters, T3: Model B</div>
+
+<div class="standard"><a id='magicparlabel-7328' /><img style='width:45%;' src='17_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y11R_txt.png' alt='image: 17_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y11R_txt.png' />
+<img style='width:45%;' src='18_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y11I_txt.png' alt='image: 18_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y11I_txt.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-7329' /><img style='width:45%;' src='19_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y12R_txt.png' alt='image: 19_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y12R_txt.png' />
+<img style='width:45%;' src='20_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y12I_txt.png' alt='image: 20_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y12I_txt.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-7330' /><img style='width:45%;' src='21_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y21R_txt.png' alt='image: 21_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y21R_txt.png' />
+<img style='width:45%;' src='22_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y21I_txt.png' alt='image: 22_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y21I_txt.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-7331' /><img style='width:45%;' src='23_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y22R_txt.png' alt='image: 23_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y22R_txt.png' />
+<img style='width:45%;' src='24_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y22I_txt.png' alt='image: 24_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_Y22I_txt.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-7332' /><img style='width:45%;' src='25_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_NP1_txt.png' alt='image: 25_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_NP1_txt.png' />
+<img style='width:45%;' src='26_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_NP2_txt.png' alt='image: 26_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_NP2_txt.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-7333' /><img style='width:45%;' src='27_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_NP3_txt.png' alt='image: 27_home_user_LNA2015_doc_pauluskruger_github_io_example3_Fetmodel_NP3_txt.png' />
+</div>
+</body>
+</html>

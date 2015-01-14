@@ -1,0 +1,39 @@
+subck idealfet 0 I U
+
+L:LG1 G1 G l=0.1e-9 r=0.1 temp=290
+L:LS1 S0 S1 l=0.1e-9 r=0.1 temp=290
+L:LS2 S0 S2 l=0.1e-9 r=0.1 temp=290
+L:LS3 S0 S2 l=0.1e-9 r=0.1 temp=290
+L:LD1 D0 D1 l=0.1e-9 r=0.1 temp=290
+
+R:RS1 S1 S2 r=0.1 temp=290
+C:CG1 G1 S1 c=0.15e-12
+C:CD1 D1 S2 c=0.15e-12
+
+L:LG2 G1 I l=0.8e-9
+L:LD2 D1 U l=0.6e-9
+L:LS4 0 S1 l=0.1e-9
+L:LS5 0 S2 l=0.05e-9
+
+*** Device
+R:Rs S0 S r=0.1 temp=290
+
+VCCS:GM S G S D gm=0.08
+
+C:CG S G c=0.8e-12
+R:RG S G r=1 temp=290
+
+C:CGD G D c=0.1e-12
+
+C:CD  S D c=0.1e-12
+R:RD S D r=100 temp=10
+R:RU D0 D r=1 temp=290
+
+SET:OPT1 CG:C(0.05e-12,2e-12) CD:C(0.05e-12,2e-12) CGD:C(0.05e-12,0.2e-12)
+SET:OPT2 RU:R(0.1,100)  RS:R(0.1,10) 
+SET:OPT3 RG:R(1e5,1e8)  RD:R(0.1,500) RD:TEMP(1e3,1e5)
+SET:OPT4 GM:GM(0.01,0.5) GM:TD(1e-15,1e-9)
+SET:OPT $OPT1 $OPT2 $OPT3 $OPT4
+LOADPARAM: Model.dat  $OPT
+
+.end

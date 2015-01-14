@@ -1,0 +1,5 @@
+SET:TEMP temp=290
+set:DUR er=4 tand=0.02 SR=0.4e-6 Th=0.017e-3 B=0.787e-3 $TEMP
+SET:DURVIA $DUR T=0
+set:DURR  er=4 tand=0.002 SR=0.4e-6 Th=0.2e-3 B=0.787e-3 $TEMP
+SET:DISCRETE DISCRETE=1

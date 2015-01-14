@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="GENERATOR" content="LyX 2.1.1" />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<title>LyX Document</title>
+<style type='text/css'>
+/* LyX Provided Styles */
+table { border: 1px solid black; display: inline-block; }
+td { border: 1px solid black; padding: 0.5ex; }
+mstyle.mathbox { font-style: normal; }
+
+/* Layout-provided Styles */
+h2.section {
+font-weight: bold;
+font-size: x-large;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+div.standard {
+margin-bottom: 2ex;
+}
+div.plain_layout {
+text-align: left;
+
+}
+ul.itemize {
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+margin-left: 3ex;
+text-align: left;
+
+}
+h3.subsection {
+font-weight: bold;
+font-size: large;
+margin-top: 0.9ex;
+margin-bottom: 0.5ex;
+text-align: left;
+
+}
+h4.subsubsection {
+font-weight: bold;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.4ex;
+text-align: left;
+
+}
+h6.subparagraph {
+font-weight: bold;
+font-size: medium;
+margin-top: 0.4ex;
+margin-left: 2ex;
+text-align: left;
+
+}
+
+
+</style>
+</head>
+<body>
+<h2 class="section"><a id='magicparlabel-0' /><span class="section_label">1</span> Intro</h2>
+<div class="standard"><a id='magicparlabel-572' />This example show how an inexpensive LNA can be designed having an ultra low noise figure together with the following spesifications </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="standard"><a id='magicparlabel-665' /><table><tbody><tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-709' />Bandwidth</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-710' />0.1-1</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-711' />GHz</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-714' />S11</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-715' />&lt;-10</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-716' />dB</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-719' />S22</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-720' />&lt;-10</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-721' />dB</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-724' />Gain</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-725' />&gt;20</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-726' />dB</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-975' />Gain flatness</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-1043' />&lt;<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &plusmn; </mo>
+ </mrow></math>2</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-977' />dB</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-1020' />Dispersion</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-1021' />&lt;30</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-1022' />degrees</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+<h2 class="section"><a id='magicparlabel-1180' /><span class="section_label">2</span> Design steps</h2>
+<div class="standard"><a id='magicparlabel-1187' />An Multipath amplifier consist of the amplification paths, the input network that divided the signal between the paths and an output network that combine the signals again.</div>
+
+<div class="standard"><a id='magicparlabel-3062' />To make the design easier, unconditional stable amplification paths are designed, which then normally ensure that the whole amplifier is also unconditionally stable. Thereafer, the input network is designed to match the 50 Ohm input 1) to the optimum input impedances (for minimum noise) of the amplifier paths and 2) to terminate it (small <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>S</mi>
+   </mrow>
+   <mrow><mn>11</mn>
+   </mrow>
+  </msub>
+ </mrow></math>). Lastly, the output network is designed to combine the signals of the paths in the correct ratio, to achieve a flat gain profile and to terminate the output.</div>
+
+<div class="standard"><a id='magicparlabel-3520' />Components and models used:</div>
+
+<ul class="itemize"><a id='magicparlabel-3523' /><li class="itemize_item">Double-sided 0.8mm FR4 PCB (<a href="NN.subs">Substrate definition</a>), with the bottom layer a ground plane and the components and microstrip lines on the top layer.</li>
+<li class="itemize_item">0603 NPO capacitors that are modeled as a capacitor with serie inductance and resistance (<a href="0603C0.ckt">0603C0.ckt</a>) . A lookup table is used for each discrete capacitance value to determine the series resistance.</li>
+<li class="itemize_item">0603 wire wound inductors that are modeled as an inductor with series resistance and parallel resistance and capacitance (<a href="0603L0.ckt">0603L0.ckt</a>) . A lookup table is used for each discrete inductance value.</li>
+<li class="itemize_item">0603 resistors is used as passive components.</li>
+<li class="itemize_item">ATF35143 HEMTs are used as active devices. Above 4&nbsp;GHz, the manufacturers S-parameters are used and below 4&nbsp;GHz the S-parameters are interpolated and extrapolated using a simple <a href="Fetmodel/Fitmodel.xhtml">FET model</a>.</li>
+</ul>
+<h3 class="subsection"><a id='magicparlabel-3209' /><span class="subsection_label">2.1</span> Amplification paths</h3>
+<h4 class="subsubsection"><a id='magicparlabel-4598' /><span class="subsubsection_label">2.1.1</span> Source connection</h4>
+<div class="standard"><a id='magicparlabel-4682' />To increase the input conductance of the ATF35143 HEMTs, a 0.68pF capacitor drain-source feedback is used. This capacitor is placed directly underneath the transistor as shown below.</div>
+<h6 class="subparagraph"><a id='magicparlabel-4637' /><span class="subparagraph_label"></span> First stage: <a href="FET2.ckt">FET2.ckt</a></h6>
+<div class="standard"><a id='magicparlabel-4638' /><img src='0_home_user_LNA2015_StableStages_FET2b.png' alt='image: 0_home_user_LNA2015_StableStages_FET2b.png' />
+</div>
+<h6 class="subparagraph"><a id='magicparlabel-4754' /><span class="subparagraph_label"></span> Second stage: <a href="ATF3A.ckt">ATF3A.ckt</a></h6>
+<div class="standard"><a id='magicparlabel-4675' /><img src='1_home_user_LNA2015_StableStages_ATF3Ab.png' alt='image: 1_home_user_LNA2015_StableStages_ATF3Ab.png' />
+</div>
+<h4 class="subsubsection"><a id='magicparlabel-4768' /><span class="subsubsection_label">2.1.2</span> Unconditional stable paths</h4>
+<div class="standard"><a id='magicparlabel-7462' />Circuit: <a href="S7B.ckt">S7B.ckt</a> Optimisation: <a href="S7Bo.ckt">S7Bo.ckt</a></div>
+
+<div class="standard"><a id='magicparlabel-4809' /><img src='28_home_user_LNA2015_doc_pauluskruger_github_io_example3_S7Bo.png' alt='image: 28_home_user_LNA2015_doc_pauluskruger_github_io_example3_S7Bo.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-4811' />The above circuit is shows the optimised amplification path that is unconditionally stable. The <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>1</mn><mspace width="6px" />
+   <mstyle class='mathbox'>M
+   </mstyle><mo> &Omega; </mo>
+  </mrow>
+ </mrow></math> ground the gate and a <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>39</mn><mspace width="6px" /><mo> &Omega; </mo>
+  </mrow>
+ </mrow></math> resistor is used on the source of each transitor for biasing. Power for the first stage is supplied at the 1nF capacitor.</div>
+
+<div class="standard"><a id='magicparlabel-4993' />Optimisation functions:</div>
+
+
+
+
+
+
+
+
+
+
+<div class="standard"><a id='magicparlabel-4997' /><table><tbody><tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5737' />Weight</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5912' />Bandwidth (GHz)</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5742' />Minimum Noise Measure</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5743' />Minimum</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5744' />1</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5913' />0.5-1.8</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5749' />Stability coefficient (K)</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5750' />&gt;1</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5751' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>1</mn>
+   <msup>
+    <mrow><mn>0</mn>
+    </mrow>
+    <mrow><mn>4</mn>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5914' />3..18</div>
+</td>
+</tr>
+
+
+
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5757' />&gt;1.2</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5758' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>1</mn>
+   <msup>
+    <mrow><mn>0</mn>
+    </mrow>
+    <mrow><mn>4</mn>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5915' />5..18</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5763' />Input conductance</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5764' />&gt;0.001</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5765' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>1</mn>
+   <msup>
+    <mrow><mn>0</mn>
+    </mrow>
+    <mrow><mn>6</mn>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5916' />0.1-18</div>
+</td>
+</tr>
+
+
+
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5667' />&gt;0.02</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5685' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>1</mn>
+   <msup>
+    <mrow><mn>0</mn>
+    </mrow>
+    <mrow><mn>4</mn>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5917' />0.5-0.6</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5774' />Output conductance</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5775' />&gt;0</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5776' /><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>1</mn>
+   <msup>
+    <mrow><mn>0</mn>
+    </mrow>
+    <mrow><mn>5</mn>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math></div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-5918' />1..18</div>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</tbody>
+</table>
+</div>
+
+<div class="standard"><a id='magicparlabel-6003' /><img src='9_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_S7B_Kb.png' alt='image: 9_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_S7B_Kb.png' />
+<img src='10_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_S7B_Yb.png' alt='image: 10_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_S7B_Yb.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-6004' />Minimum Noise Measure of the amplifiatin path and of the transitor stages:</div>
+
+<div class="standard"><a id='magicparlabel-6005' /><img src='6_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_S7B_M_txt.png' alt='image: 6_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_S7B_M_txt.png' />
+</div>
+<h3 class="subsection"><a id='magicparlabel-4975' /><span class="subsection_label">2.2</span> Input and Output networks</h3>
+<h4 class="subsubsection"><a id='magicparlabel-6148' /><span class="subsubsection_label">2.2.1</span> Input Network</h4>
+<div class="standard"><a id='magicparlabel-7517' /><a href="I5C.ckt">I5C.ckt</a></div>
+
+<div class="standard"><a id='magicparlabel-6540' /><img src='11_home_user_LNA2015_doc_pauluskruger_github_io_example3_I5C.png' alt='image: 11_home_user_LNA2015_doc_pauluskruger_github_io_example3_I5C.png' />
+</div>
+<h4 class="subsubsection"><a id='magicparlabel-6518' /><span class="subsubsection_label">2.2.2</span> Output Network</h4>
+<div class="standard"><a id='magicparlabel-7536' /><a href="U5C.ckt">U5C.ckt</a></div>
+
+<div class="standard"><a id='magicparlabel-6502' /><img src='7_home_user_LNA2015_doc_pauluskruger_github_io_example3_U5C.png' alt='image: 7_home_user_LNA2015_doc_pauluskruger_github_io_example3_U5C.png' />
+</div>
+<h4 class="subsubsection"><a id='magicparlabel-6544' /><span class="subsubsection_label">2.2.3</span> Final amplifier</h4>
+<div class="standard"><a id='magicparlabel-7549' />Optimise values: <a href="S5C.ckt">S5C.ckt</a></div>
+
+<div class="standard"><a id='magicparlabel-7596' />Optimise layout: <a href="S5CL.ckt">S5CL.ckt</a></div>
+
+<div class="standard"><a id='magicparlabel-6663' /><img src='12_home_user_LNA2015_doc_pauluskruger_github_io_example3_O5CL.png' alt='image: 12_home_user_LNA2015_doc_pauluskruger_github_io_example3_O5CL.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-6956' />Requirements:</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="standard"><a id='magicparlabel-7185' /><table><tbody><tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6938' />Bandwidth</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6939' />0.1-1</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6940' />GHz</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6941' />S11</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6942' />&lt;-10</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6943' />dB</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6944' />S22</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6945' />&lt;-10</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6946' />dB</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6947' />Gain</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6948' />&gt;20</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6949' />dB</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6950' />Gain flatness</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6951' />&lt;<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &plusmn; </mo>
+ </mrow></math>2</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6952' />dB</div>
+</td>
+</tr>
+<tr><td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6953' />Dispersion</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6954' />&lt;30</div>
+</td>
+
+<td align='center' valign='top'><div class="plain_layout"><a id='magicparlabel-6955' />degrees</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+
+<div class="standard"><a id='magicparlabel-6675' /><img src='13_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_O5C_R.png' alt='image: 13_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_O5C_R.png' />
+<img src='14_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_O5C_A.png' alt='image: 14_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_O5C_A.png' />
+<img src='15_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_O5C_D.png' alt='image: 15_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_O5C_D.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-7094' />Noise measure:</div>
+
+<div class="standard"><a id='magicparlabel-7092' /><img src='8_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_O5C_M.png' alt='image: 8_home_user_LNA2015_doc_pauluskruger_github_io_example3_plots_O5C_M.png' />
+</div>
+
+<div class="standard"><a id='magicparlabel-7189' />Pulse responce:</div>
+
+<div class="standard"><a id='magicparlabel-7194' />...</div>
+
+<div class="standard"><a id='magicparlabel-6676' /><img src='/home/user/LNA2015/doc/pauluskruger.github.io/example3/plots/O5A_G.png' alt='image: ' />
+</div>
+</body>
+</html>

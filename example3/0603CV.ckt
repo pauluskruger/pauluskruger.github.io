@@ -1,0 +1,14 @@
+subck 0603C0 0 1
+#include NN.subs
+
+TMS:TP0 0 +1 A2 $DUR len=0.6e-3 w=0.9e-3 FOOTPRINT open=2
+TMS:TP2 0 B1 B2 $DUR len=0.3e-3 w=0.9e-3 FOOTPRINT open=2
+TMS:TP3 0 +2 B1 $DUR len=0.3e-3 w=0.9e-3 FOOTPRINT open=2
+
+VIA:V1 0 B1 $DURVIA D=0.5e-3 FOOTPRINT="RPAD=0.01e-3"
+
+
+C:CC A2 B2 c=100e-12 l=0.75e-9 tand=1e-4 rskin=2.5e-6 ESRF=100e6 ESR=70e-3 $TEMP
+func:C1 type=4 v1=39 data=NPO_0603.txt CC:C(1) CC:ESR(2) CC:ESRF(3)
+
+FP:M2PAD:C +1 +2 D=0.9e-3 B=0.6e-3 W=0.9e-3 LABEL=C VALUE=CC:C

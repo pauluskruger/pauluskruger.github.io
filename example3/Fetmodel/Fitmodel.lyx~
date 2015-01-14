@@ -1,0 +1,287 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+ATF35143 S-parameter extropolation to low frequencies
+\end_layout
+
+\begin_layout Standard
+(Source code given in 
+\begin_inset CommandInset href
+LatexCommand href
+name "example3/Fetmode"
+target "https://github.com/pauluskruger/pauluskruger.github.io/tree/master/example3/Fetmode"
+type "file:"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Section
+
+\series bold
+HEMT Model
+\end_layout
+
+\begin_layout Standard
+The package model as given in the manufacture datasheet are used to model
+ the package and the following model is used to model the chip (
+\begin_inset CommandInset href
+LatexCommand href
+name "Circuit"
+target "Model.ckt"
+type "file:"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename hemt2.fig
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The value of Ta = 290K is kept fixed and all other values of the chip model
+ are optimised 
+\begin_inset CommandInset href
+LatexCommand href
+name "Model"
+target "Model.ckt"
+type "file:"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Fit results
+\end_layout
+
+\begin_layout Standard
+First the model is fitted to the S-parameters over the bandwidths 0.5-3
+\begin_inset space ~
+\end_inset
+
+GHz (A) and 0.5-10
+\begin_inset space ~
+\end_inset
+
+GHz (B).
+\end_layout
+
+\begin_layout Standard
+The fitted values are 
+\begin_inset CommandInset href
+LatexCommand href
+name "A"
+target "Model.dat"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset href
+LatexCommand href
+name "B"
+target "ModelFull.dat"
+
+\end_inset
+
+ and the graphs below shows how the model compare to the S-parameters.
+ 
+\end_layout
+
+\begin_layout Standard
+A new 
+\begin_inset CommandInset href
+LatexCommand href
+name "S-Parameters"
+target "atf35143_M1.s2p"
+
+\end_inset
+
+ file is then generated using the model, which is used in the amplifier
+ design.
+\end_layout
+
+\begin_layout Standard
+Graph Legend: 
+\color red
+T1: Model A, 
+\color green
+T2: Manufacturers S-Parameters, 
+\color blue
+T3: Model B
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Y11R.txt.eps
+	width 45col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Y11I.txt.eps
+	width 45col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Y12R.txt.eps
+	width 45col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Y12I.txt.eps
+	width 45col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Y21R.txt.eps
+	width 45col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Y21I.txt.eps
+	width 45col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Y22R.txt.eps
+	width 45col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Y22I.txt.eps
+	width 45col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename NP1.txt.eps
+	width 45col%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename NP2.txt.eps
+	width 45col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename NP3.txt.eps
+	width 45col%
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -116,6 +116,18 @@ type "file:"
 : Simple 2 path LNA with optimum output network
 \end_layout
 
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Example 3"
+target "example3/example3.xhtml"
+type "file:"
+
+\end_inset
+
+: A real 2 path LNA 
+\end_layout
+
 \begin_layout Standard
 Theory:
 \end_layout

@@ -1,0 +1,79 @@
+subck test 0
+
+R:RI 0 B1 r=50 vac=2 temp=0
+Ckt:T1 0 B1 B2 Model.ckt
+R:Ru 0 B2 r=0.05 temp=0
+
+SETPARAM:POWER-SCALE RI:r RU:r
+
+R:RI 0 A1 r=50 vac=2 temp=0
+Ckt:T2 0 A1 A2 Sparam2.ckt
+R:Ru 0 A2 r=0.05 temp=0
+
+R:RI 0 C1 r=50 vac=2 TEMP=0
+*Ckt:T3 0 C1 C2 Sparam.ckt
+Ckt:T3 0 C1 C2 Model2.ckt
+R:Ru 0 C2 r=0.05 TEMP=0
+
+*SET:OPT1 T1:C1:C(0.5e-12,2e-12) T1:GM:GM(0.01,0.1) T1:RD:R(10,1e3) T1:CGD:C(0.05e-12,0.2e-12)  T1:CD:C(0.1e-12,1e-12) 
+SET:OPT1 T1:CG:C(0.05e-12,2e-12) T1:CD:C(0.05e-12,2e-12) T1:CGD:C(0.05e-12,0.2e-12)
+SET:OPT2 T1:RU:R(0.1,100)  T1:RS:R(0.1,10) 
+SET:OPT3 T1:RG:R(1e5,1e8)  T1:RD:R(0.1,500) T1:RD:TEMP(1e3,1e5)
+SET:OPT4 T1:GM:GM(0.01,0.5) T1:GM:TD(1e-15,1e-9)
+SET:OPT $OPT1 $OPT2 $OPT3 $OPT4
+
+SET:FC1 F1=T1:Y:11  AVG1=1 WGH1=0
+SET:FC2 F2=T2:Y:11  AVG2=1 WGH2=1 N2=1
+SET:FC3 F3=T1:Y:21  AVG3=1 WGH3=0
+SET:FC4 F4=T2:Y:21  AVG4=1 WGH4=1 N4=3
+SET:FC5 F5=T1:Y:12  AVG5=1 WGH5=0
+SET:FC6 F6=T2:Y:12  AVG6=1 WGH6=1 N6=5
+SET:FC7 F7=T1:Y:22  AVG7=1 WGH7=0
+SET:FC8 F8=T2:Y:22  AVG8=1 WGH8=1 N8=7
+SET:FC9   F9=T1:NPARAM:1  AVG9=1  WGH9=0
+SET:FC10 F10=T2:NPARAM:1  AVG10=1 WGH10=1 N10=9
+SET:FC11 F11=T1:NPARAM:2  AVG11=1 WGH11=0
+SET:FC12 F12=T2:NPARAM:2  AVG12=1 WGH12=1 N12=11
+SET:FC13 F13=T1:NPARAM:5  AVG13=1 WGH13=0
+SET:FC14 F14=T2:NPARAM:5  AVG14=1 WGH14=1 N14=13
+*SET:FC15 F15=T1:NPARAM:4  AVG15=1 WGH15=0
+*SET:FC16 F16=T2:NPARAM:4  AVG16=1 WGH16=1 N16=15
+SET:FC $FC1 $FC2 $FC3 $FC4 $FC5 $FC6 $FC7 $FC8 $FC9 $FC10 $FC11 $FC12 $FC13 $FC14
+SET:BW1 start=0.5e9 stop=10.0e9 step=0.5e9
+
+*LOADPARAM: C1.dat  $OPT
+
+SET:OPSET   dir=-1 $BW1 maxsteps=10 savevar=C1.dat   $FC $OPT toll=1e-4
+
+** Optimize network **
+*optim:step2 $OPSET 
+*optim:rand $OPSET
+*optim:step2 $OPSET 
+*optim:rand $OPSET
+*optim:rands $OPSET P1=0.5 P2=2000
+*optim:step2 $OPSET
+*optim:rand $OPSET
+*optim:rands $OPSET P1=0.8 P2=2000
+*optim:step2 $OPSET
+*optim:rand $OPSET
+
+
+plot:"Y11R.txt" freq T1:Y:11:Re T2:Y:11:Re T3:Y:11:Re 
+*plot:"Y11I.txt" freq T1:Y:11:Im T2:Y:11:Im T3:Y:11:Im 
+*plot:"Y21R.txt" freq T1:Y:21:Re T2:Y:21:Re T3:Y:21:Re 
+*plot:"Y21I.txt" freq T1:Y:21:Im T2:Y:21:Im T3:Y:21:Im 
+*plot:"Y12R.txt" freq T1:Y:12:Re T2:Y:12:Re T3:Y:12:Re 
+*plot:"Y12I.txt" freq T1:Y:12:Im T2:Y:12:Im T3:Y:12:Im 
+*plot:"Y22R.txt" freq T1:Y:22:Re T2:Y:22:Re T3:Y:22:Re 
+*plot:"Y22I.txt" freq T1:Y:22:Im T2:Y:22:Im T3:Y:22:Im 
+plot:"NP1.txt" freq T1:NPARAM:1:Re T2:NPARAM:1:Re T3:NPARAM:1:Re
+plot:"NP2.txt" freq T1:NPARAM:2:Re T2:NPARAM:2:Re T3:NPARAM:2:Re
+plot:"NP3.txt" freq T1:NPARAM:5:Re T2:NPARAM:5:Re T3:NPARAM:5:Re T1:NPARAM:5:Im T2:NPARAM:5:Im T3:NPARAM:5:Im
+print:"Model1.s2p" freq T1:S:11:MAG T1:S:11:ANG T1:S:21:MAG T1:S:21:ANG T1:S:12:MAG T1:S:12:ANG T1:S:22:MAG T1:S:22:ANG
+*print:"Model1.s2p" freq T1:YPARAM
+calc:AC start=0.01e9 stop=2e9 step=0.01e9
+CLOSEPRINT:
+print:"Model1.n2p" freq T1:FMIN T1:NPARAM:8:Mag T1:NPARAM:8:ANG T1:RN50
+calc:AC start=0.01e9 stop=2e9 step=0.01e9
+
+.ends

@@ -1,0 +1,91 @@
+subck Opt2 0
+
+R:Ri 0 1 r=50 temp=0 vac=2
+
+SET:TEMP TEMP=290
+SET:Q Q=50 $TEMP
+
+CKT:I1 0 1 i1 i2 i3 I5C.ckt FOOTPRINT
+
+CKT:S1 0 +i1 e1 S7C.ckt FOOTPRINT
+CKT:S2 0 +i2 e2 S7C.ckt FOOTPRINT
+CKT:U1 0 e1 e2 U1 i3 U5C.ckt FOOTPRINT
+
+SET:OPTI+I1: TI0:LEN(2.5e-3,5e-3) TI0:W(0.9e-3,2e-3) TI1:LEN(0.2e-3,5e-3) L0:L1:1(1,48) L1:L1:1(1,48) L2:L1:1(1,48,1) TG1:LEN(0.5e-3,2e-3) TG2:LEN(0.5e-3,2e-3) TI3:LEN(0.5e-3,5e-3) TI2:LEN(0.5e-3,5e-3) TI4:LEN(1.0e-3,5e-3) TFB:LEN(12e-3,20e-3) TFB2:LEN(2e-3,20e-3) TFB:W(0.3e-3,2e-3) TFB2:W(0.3e-3,2e-3) RFB:R1:R(1e1,1e5) TI1:W(0.5e-3,1e-3)  TG1:W(0.5e-3,1e-3) TG2:W(0.5e-3,1e-3)  TI2:W(0.5e-3,1e-3) TI3:W(0.7e-3,1e-3) TI4:W(0.7e-3,1e-3)
+*  L3:L1:1(1,48,1)
+*FUNC:F1 type=0 v1=1e-3 v2=1e-4 U1:TD1:LEN(1,1) U1:TD2:LEN(1,0)
+SET:OPTU1 LD1:L1:1(1,48,1) LD2:L1:1(1,48,1) LU1:L1:1(1,48,1) LU2:L1:1(1,48,1) LU3:L1:1(1,48,1) LE1:L1:1(1,48,1) LE3:L1:1(1,48,1)
+*SET:OPTU2 CD1:C1:1(1,10,1) CD2:C1:1(1,10,1) CUT:C1:1(1,41,1) CU:C1:1(1,41,1) CE1:C1:1(1,41,1) 
+SET:OPTU2 CUT:C1:1(1,41,1) CU:C1:1(1,41,1) CE1:C1:1(1,41,1) 
+SET:OPTU3 RUT:R1:R(1,100) RT2:R1:R(1,150) RFB:R1:R(1,1e3) RE1:R1:R(1,120) RE2:R1:R(1,1e5) RE3:R1:R(1,120)
+*SET:OPTU4 TD1:LEN(0.5e-3,5e-3) TD2:LEN(0.5e-3,5e-3) TU1:LEN(0.5e-3,5e-3) TU2:LEN(0.5e-3,5e-3) TU3:LEN(0.5e-3,5e-3) TU4:LEN(0.5e-3,5e-3) 
+SET:OPTU4 TU1:LEN(0.5e-3,2e-3) TU2:LEN(0.5e-3,5e-3) TU3:LEN(0.5e-3,5e-3) TU4:LEN(0.5e-3,5e-3)  F1:1(0.5e-3,2e-3) F1:2(0.1e-3,2.0e-3)
+SET:OPTU5 TD1:W(0.3e-3,0.9e-3)   TD2:W(0.3e-3,0.9e-3)   TU1:W(0.3e-3,0.9e-3)   TU2:W(0.3e-3,0.9e-3)   TU3:W(0.3e-3,0.9e-3)   TU4:W(0.3e-3,0.9e-3)   
+SET:OPTU+U1: $OPTU1 $OPTU2 $OPTU3 $OPTU4 $OPTU5 TU0:LEN(2.5e-3,5e-3) TU0:W(0.9e-3,2e-3)
+
+R:Ru 0 U1 r=50 temp=0
+A:AD 0 U1 0 UD rin=1e6 rout=50 A=1e3 PW=1.2 PHASE=3.1416
+
+SETPARAM:POWER-SCALE RI:R RU:R
+
+set:BW1      start=0.01e9 stop=1.5e9 step=0.05e9
+set:PLOTFREQ start=0.01e9 stop=2.0e9 step=0.01e9
+
+*set:OPTS1 S1:CD:C(0.1e-12,10e-12) S1:CF:C(0.1e-12,10e-12)
+*set:OPTS2 S2:CD:C(0.1e-12,10e-12) S2:CF:C(0.1e-12,10e-12)
+set:OPT $OPTI $OPTU AD:PW(0.4,2)
+*$OPTS1 $OPTS2
+
+*set:FC1 F1=Comp:M1-0 AVG1=1 WGH1=1
+set:FC1 F1=temp:U1 AVG1=1 WGH1=1 				START1=0.05e9 STOP1=1e9
+set:FC2 F2=RI:REFLECT:0:MAG AVG2=11 EX2=0.3 WGH2=1e3		START2=0.1e9  STOP2=1.0e9
+set:FC3 F3=RU:REFLECT:0:MAG AVG3=11 EX3=0.3 WGH3=1e3
+SET:FC4 F4=gain:U1:mag		AVG4=3		WGH4=1e3 	START4=0.1e9 STOP4=1.0e9
+*SET:FC5 F5=gain:U1:delay		AVG5=3		WGH5=1 	START5=0.1e9 STOP5=1e9
+SET:FC6 F6=RI:REFLECT:0:MAG AVG6=11 EX6=0.9 WGH6=1e3
+SET:FC5 F5=gain:UD:ang		AVG5=11 EX5=0		WGH5=0.5  START5=0.01e9 STOP5=1.0e9
+SET:FC7 F7=gain:UD:ang		AVG7=21 EX7=0		WGH7=0.5  START7=0.01e9 STOP7=1.0e9
+*SET:FC8 F8=gain:U1:db		AVG8=11 EX8=30		WGH8=1e2  START8=1.2e9
+SET:FC9 F9=noise:U1:Re		AVG9=11 EX9=1e3		WGH9=1e-1  START9=1.0e9
+SET:FC8 F8=gain:U1:db		AVG8=21 EX8=30		WGH8=1e-1  START8=0.1e9 STOP8=1e9
+
+set:FC $FC1 $FC2 $FC3 $FC4 $FC5 $FC6 $FC7 $FC8 $FC9
+*$FC8
+
+LOADPARAM: Opt2U.dat $OPT
+LOADPARAM: Opt3U.dat $OPT
+LOADPARAM: O5C.dat $OPT
+
+*FP:DRAW:xfig O5C.fig show
+*calc:Layout 
+*.ends
+
+set:OPSET dir=-1 $BW1 maxsteps=0 savevar=O5C.dat $FC $OPT toll=1e-4
+
+optim:step2 $OPSET
+*optim:rand $OPSET
+*optim:rands $OPSET P1=0.5 P2=2000
+*optim:step2 $OPSET
+*optim:rand $OPSET
+
+FP:DRAW:xfig O5C.fig show
+calc:Layout 
+*.ends
+
+*SETPARAM: RI:R 1
+plot:"plots/O5C_R" freq RI:REFLECT:DB RU:REFLECT:DB
+*plot:"plots/O5C_M" freq comp:M1-0 S1:M4:0 S2:M4:0 temp:U1
+*plot:"plots/O5C_M" freq S1:M4:0 S2:M4:0 temp:U1
+*plot:"plots/O5C_P" freq signal:U1:ANG signal:i3:ang
+plot:"plots/O5C_D" freq gain:UD:ANG
+plot:"plots/O5C_A" freq gain:U1:db
+calc:AC $PLOTFREQ
+CLOSEPRINT:
+
+plot:"plots/O5C_M" freq S1:M4:0 S2:M4:0 temp:U1
+calc:AC start=0.01e9 stop=1.1e9 step=0.01e9
+CLOSEPRINT:
+
+plot:"plots/O5C_G" freq gain:U1:RE gain:U1:IM
+plot:"plots/O5C_N" freq noise:U1:RE noise:U1:IM
+calc:AC start=0.01e9 stop=10e9 step=0.01e9

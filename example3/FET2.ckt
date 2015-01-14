@@ -1,0 +1,50 @@
+subck FET1 0 1 2
+#include NN.subs
+
+*Gate footprint
+TMS:TG1 0 1 G  $DUR len=0.3e-3 w=0.9e-3 FOOTPRINT
+TMS:TG2 0 G G2 $DUR len=0.3e-3 w=0.9e-3 FOOTPRINT open=2
+
+*Gate-Drain capacitor
+C:CGD G2 D0 c=100e-12 l=0.75e-9 tand=1e-4 rskin=2.5e-6 ESRF=100e6 ESR=70e-3 $TEMP
+func:CGDV type=4 v1=1 data=NPO_0603.txt CGD:C(1) CGD:ESR(2) CGD:ESRF(3)
+FP:M2PAD:CGD 1 D2 D=0.9e-3 B=0.6e-3 W=0.9e-3 LABEL=C VALUE=CGD:C
+
+
+TMS:TD1 0 D2 D1 w=0.6e-3 len=0.5e-3 ang=22.5 FOOTPRINT
+TMS:TD2 0 D1 2 w=0.6e-3 len=0.5e-3 ang=22.5 FOOTPRINT
+
+TMS:TD0 0 +D2 D0 $DUR len=0.6e-3 w=0.9e-3 FOOTPRINT
+
+*Drain-Source capacitor
+*C:CDS D1 S0 c=100e-12 l=0.75e-9 tand=1e-4 rskin=2.5e-6 ESRF=100e6 ESR=70e-3 $TEMP
+*func:CDSV type=4 v1=1 data=NPO_0603.txt CDS:C(1) CDS:ESR(2) CDS:ESRF(3)
+FP:M2PAD:CDS -2 S0 D=0.9e-3 B=0.6e-3 W=0.9e-3 LABEL=0 dir1=1 dir2=1
+
+
+FP:EQ:EQ1 2 T1 X=2.2e-3 Y=0.0e-3 ANG=0
+TMS:TSA0 0 T1 T2 $DUR len=0.45e-3 w=0.6e-3 FOOTPRINT 
+TMS:TSA1 0 T2 T3 $DUR len=0.45e-3 w=0.6e-3 FOOTPRINT
+
+TMS:TSB0 0 +S0 S1 $DUR len=0.45e-3 w=0.6e-3 FOOTPRINT 
+TMS:TSB1 0 S1 S2 $DUR len=0.45e-3 w=0.6e-3 FOOTPRINT
+R:RS S0 0 r=39 $TEMP
+*Source1 capacitor
+C:CS1 T2 V1 c=100e-12 l=0.75e-9 tand=1e-4 rskin=2.5e-6 ESRF=100e6 ESR=70e-3 $TEMP
+func:CS1V type=4 v1=39 data=NPO_0603.txt CS1:C(1) CS1:ESR(2) CS1:ESRF(3)
+
+FP:M2PAD:CS1 -T1 +V0 D=0.9e-3 B=0.6e-3 W=0.9e-3 LABEL=C VALUE=CS1:C DIR1=-1 DIR2=-1
+
+TMS:TVA0 0 +V0 V1 $DUR len=0.45e-3 w=0.6e-3 FOOTPRINT 
+TMS:TVA2 0 V1 V2 $DUR len=0.45e-3 w=0.6e-3 FOOTPRINT
+
+VIA:V1 0 V1 $DURVIA D=0.5e-3 FOOTPRINT="RPAD=0.01e-3"
+
+*Transistor
+T:T1 S0 G D2 atf35143_M1.s2p
+R:R0 S0 T1 r=1e-3
+
+*FP:DRAW:xfig FET2.fig show
+*calc:Layout 
+
+.ends

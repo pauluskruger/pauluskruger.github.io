@@ -1,0 +1,16 @@
+subck 0603C0 0 1 2
+#include NN.subs
+
+TMS:TP0 0 1  A2 $DUR len=0.6e-3 w=0.9e-3 FOOTPRINT
+TMS:TP3 0 +2 B2 $DUR len=0.6e-3 w=0.9e-3 FOOTPRINT
+TMSGAP:TG1 0 A2 B2 M1=TP0 M2=TP3
+
+R:R2 A2 X1 r=1 $TEMP
+C:CP X1 XP c=0.1e-12 
+R:RP XP B2 r=1 $TEMP
+L:LS X1 B2 l=1e-9 rskin=1 $TEMP
+ 
+func:L1 type=4 v1=10 data=IND_0603.txt LS:L(1) RP:R(2) R2:R(3) CP:C(4) LS:RSKIN(5)
+**1-48**L, RP, R2, C, rskin@1GHz
+
+FP:M2PAD:C 1 +2 D=0.9e-3 B=0.6e-3 W=0.9e-3 LABEL=L VALUE=LS:L

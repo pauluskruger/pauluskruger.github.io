@@ -121,21 +121,22 @@ Theory:
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-http://dx.doi.org/10.1109/TMTT.2010.2095878
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset href
 LatexCommand href
 name "Theory and Design of Low-Noise Multipath Amplifiers"
 target "http://dx.doi.org/10.1109/TMTT.2010.2095878"
+type "file:"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Cheap 0.36 dB NF broadband multipath LNA"
+target "http://dx.doi.org/10.1049/el.2011.3422"
 type "file:"
 
 \end_inset

@@ -1,0 +1,4 @@
+subck atf35143 s1 s2 G D
+R:Rs s1 s2 r=1e-3
+T:T1 s1 G D atf35143_M1.s2p
+.ends
